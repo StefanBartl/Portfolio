@@ -1,31 +1,34 @@
+/* CSS-File for Stefan Bartls Fulstack_Web_Development-Portfolio along the "Odin-Project"-Programming Course. 
+                                        Credits in README.md!*/
+                
+                /* Fonts */
 @font-face {
     font-family: 'Fira Code';
     src: url('woff2/FiraCode-Regular.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
   }
-
+                /* Document-Start */
 body {
     margin: -1px;
     font-family: Fira Code, arial, sans-serif;
 }
-
-
-/* Top/Head Sector */
+                /* Top/Head Sector */
 #top{
     background: #1992d4;
     background: linear-gradient(180deg, #1992d4, white);
     display: grid;
     grid: 1fr / 1fr 1fr;
-
 }
 #imgMe{
     width: clamp(180px, 300px, 400px);
-    height: clamp(180px, 300px, 400px);    
+    height: clamp(180px, 300px, 400px);  
+    border-top-left-radius: 5%;  
 }
 #imgContainer{
         margin-top: 15px;
         text-align: right;
+   
 }
 #imgTextContainer{
     width: clamp(100px, 380px, 460px);
@@ -36,6 +39,7 @@ body {
     justify-content: center;
     text-align: center;
     margin-top: 15px;
+    border-top-right-radius: 5%;
 }
 #about{
     padding-top: 30px;
@@ -49,70 +53,90 @@ body {
 .smicons {
     height: clamp(16px, 24px, 40px) ;
     width: clamp(16px, 24px, 40px);
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow:  0 0 1em black;
+    border-radius: 40%;
+    margin: 10px;
+}
+text{
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
-/* Middle Sector */
+                    /* Middle Sector */
 #mid{
     grid-row-start: 2;
     display: grid;
     text-align: center;
-    grid: 0.7fr 1.6fr 0.7fr / repeat(7, 1fr);
+    grid: 0.3fr 2.4fr 0.3fr / repeat(7, 1fr);
 }
 .grid{
-    height: clamp(50px, auto, auto);
-    width: clamp(50px, auto, auto);
+    min-height: 100px;
+    min-width: 100px;
 }
 .projectimg{
     width: 150px;
     height: 150px;
+
+    transition: all 1s ease-out 1s;
+}
+.projectimg:hover{
+    border: dotted 8px yellow;
+    border-radius: 10%;
+    width: 300px;
+    height: 300px;
 }
 .projects {
-    width: clamp(200px, 300px, 400px);
-    height: clamp(200px, 300px, 400px);
+    width: clamp(200px, 300px, auto);
+    height: clamp(200px, 300px, auto);
 }
-
+.projectDescription{
+    min-height: 200px;
+}
 #myWork{
     align-self: flex-end;
+    animation: myAni 10s ease-in-out infinite normal;
+    position: relative;
 }
 
-
-
-
-
-/* Bottom/Footer Sector */
+                    /* Bottom/Footer Sector */
 #bot{
     background-color: #1992d4;
     grid-row-start: 5;
-
-   
     display: grid;
-    grid: 1fr / 1fr 1fr;
-    align-self: auto;
-    justify-self: auto;
+    grid: 1fr / 2fr 1fr;
+    align-self: center;
+    justify-self: center;
+    border: solid 1px #1992d4;
 }
 #imgDo{
-    width: clamp(240px, 300px, 400px);
-    height: clamp(240px, 300px, 400px);    
+    width: clamp(200px, 380px, 460px);
+    height: clamp(240px, 300px, 400px);   
+    border: solid 1px #1992d4;
+  
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 20%;
 }
 #imgBot{
     margin-top: 15px;
     margin-bottom: 15px;
-    
+
 }
 #botTextContainer{
-    width: clamp(200px, 380px, 460px);
-    height: clamp(240px, 300px, 400px);
     margin-top: 15px;
     margin-bottom: 15px;
-
     justify-self: end;
     background-color: white;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
+    border: solid 1px white;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 50%;
 }
 #contactText{
     padding-top: 20px;
@@ -120,10 +144,41 @@ body {
 #conMe {
     padding-bottom: 20px;
 }
-
-#mailtext {
-
-}
 #mail{
     text-decoration: none;
+    border: dotted 2px white;
+    border-radius: 5px;
 }
+
+/* Hovers */
+#mail:hover{
+    border: dotted 2px red;
+    border-radius: 5px;
+}
+.smicons:hover{
+    outline: dotted 5px yellow;
+}
+
+/* CSS-Animations */
+@keyframes myAni {
+    0% {
+        color: black;
+    }
+    25% {
+        color: #1992d4;
+        transform: translateY(80%);
+    }
+    50%{
+        color: black;
+        transform: translateY(0%);
+    }
+    75%{
+        color: #1992d4 ;
+        transform: translateX(80%);
+    }
+    100% {
+        color: black;
+        transform: translateX(0%);
+    }   
+}
+
