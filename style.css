@@ -1,0 +1,129 @@
+@font-face {
+    font-family: 'Fira Code';
+    src: url('woff2/FiraCode-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+body {
+    margin: -1px;
+    font-family: Fira Code, arial, sans-serif;
+}
+
+
+/* Top/Head Sector */
+#top{
+    background: #1992d4;
+    background: linear-gradient(180deg, #1992d4, white);
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+
+}
+#imgMe{
+    width: clamp(180px, 300px, 400px);
+    height: clamp(180px, 300px, 400px);    
+}
+#imgContainer{
+        margin-top: 15px;
+        text-align: right;
+}
+#imgTextContainer{
+    width: clamp(100px, 380px, 460px);
+    height: clamp(100px, 320px, 400px);
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+}
+#about{
+    padding-top: 30px;
+}
+#textMe {
+    padding-bottom: 40px;
+}
+.textSB {
+    color: red;
+}
+.smicons {
+    height: clamp(16px, 24px, 40px) ;
+    width: clamp(16px, 24px, 40px);
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Middle Sector */
+#mid{
+    grid-row-start: 2;
+    display: grid;
+    text-align: center;
+    grid: 0.7fr 1.6fr 0.7fr / repeat(7, 1fr);
+}
+.grid{
+    height: clamp(50px, auto, auto);
+    width: clamp(50px, auto, auto);
+}
+.projectimg{
+    width: 150px;
+    height: 150px;
+}
+.projects {
+    width: clamp(200px, 300px, 400px);
+    height: clamp(200px, 300px, 400px);
+}
+
+#myWork{
+    align-self: flex-end;
+}
+
+
+
+
+
+/* Bottom/Footer Sector */
+#bot{
+    background-color: #1992d4;
+    grid-row-start: 5;
+
+   
+    display: grid;
+    grid: 1fr / 1fr 1fr;
+    align-self: auto;
+    justify-self: auto;
+}
+#imgDo{
+    width: clamp(240px, 300px, 400px);
+    height: clamp(240px, 300px, 400px);    
+}
+#imgBot{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+}
+#botTextContainer{
+    width: clamp(200px, 380px, 460px);
+    height: clamp(240px, 300px, 400px);
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    justify-self: end;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+#contactText{
+    padding-top: 20px;
+}
+#conMe {
+    padding-bottom: 20px;
+}
+
+#mailtext {
+
+}
+#mail{
+    text-decoration: none;
+}
