@@ -17,18 +17,22 @@
 !                           to-do 
 todo    default
 ?                               finish
-todo    default
-!                         session progress                                                
-? -)                                                                                                                                                                                             
+todo    brauchst du die sm, header icon ids? 
+todo                                                                                                                                                                                             
 */
 /* #endregion */
 
 /* #region 1) general */
 
 :root {
-     /*  ==================  
-?        ===  Colour-Palette  ===
-          ==================  */
+     /*   ==================  
+?         ===  Colour-Palette  ===
+:          ==================  */
+
+  --main-black: hsl(0, 0%, 0%);
+  --main-white: hsl(0, 0%, 100%);
+  --main-red: hsl(0, 100%, 50%);
+  --main-yellowr: hsl(60, 100%, 50%);
 
   --prime-blueviolett: hsl(238, 56%, 19%);
   --prime-darkgrey: hsl(330, 2%, 17%);
@@ -37,22 +41,12 @@ todo    default
   --prime-manner: hsl(10, 60%, 80%);
   --prime-lightgrey: hsl(71, 13%, 67%);
   --prime-pink: hsl(330, 100%, 50%);
-  --prime-pinkviolett: hsl(300, 100%, 50%);
-
-  --base-colour: hsl(201, 79%, 46%);
-  --main-black: hsl(0, 0%, 0%);
-  --main-red: hsl(0, 100%, 50%);
-
-  --base-border: hsl(0, 0%, 100%);
-  --gameboard: hsl(240, 100%, 49%);
-  --cornsilk: hsl(48, 100%, 93%);
-  --top-header: hsl(39, 77%, 83%);
+  --prime-pinkviolett: hsl(300, 100%, 50%); 
+  --prime-intense-blue: hsl(240, 100%, 49%);
+  --prime-pastell-blue: hsl(201, 79%, 46%);
 
   overflow-wrap: break-word;
   word-wrap: break-word;
-
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 /* #region Resets */
@@ -115,6 +109,107 @@ select {
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
 
 /* #endregion */
+
+/* #endregion */
+
+/* #region page layout */
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header,
+#header_sectionLeft,
+nav,
+ul,
+#div_socialmedia,
+#div_pageDesc {
+  display: flex;
+}
+
+#navlist {
+  width: 100%;
+}
+
+ul {
+  gap: 2rem;
+  width: 100%;
+}
+
+ul  :nth-child(2){
+  flex-grow: 1;
+}
+
+ul :nth-child(3){
+  margin-right: 2rem;
+}
+
+li {
+  list-style-type: none;
+}
+
+#div_pageDesc{
+  gap: 2rem;
+}
+
+#div_imgDesc{
+  display: flex;
+  min-width: 50%;
+  justify-content:flex-end;
+  align-items: center;
+  filter:drop-shadow(-2rem -1rem 3rem white )
+}
+
+#img_pageDesc{
+  height: 60%;
+  aspect-ratio: 1/1;
+  border-radius: 3rem;;
+}
+
+#div_desc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#div_desc > * {
+  width: clamp(45ch, 50%, 75ch)
+}
+
+/* #endregion */
+
+/* #region typographie*/
+
+#p_translation {
+  font-size: x-small;
+  
+}
+
+/* #endregion */
+
+/* #region */
+
+/* #endregion */
+
+/* #region media */
+
+#nav_myImage,
+.sm_media{
+  width: 3rem;
+  height: 3rem;
+}
+
+#header_sectionLeft :nth-child(2){
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: .5rem;
+}
+
+#div_socialmedia :nth-child(6){
+  filter: invert(1);
+}
+
 
 /* #endregion */
 
