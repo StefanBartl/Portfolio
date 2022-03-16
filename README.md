@@ -1,24 +1,56 @@
-# Portfolio_Page
-This is a project from Stefan Bartl (Vienna) for "The Odin Project" (https://www.theodinproject.com/).
+# Four Wins / Vier Gewinnt
+                                                                                    Special credits to:
 
-It is made with Visual Studio Code, Chrome/Firefox, Git and GitHub on a Linux Ubuntu OS.
-Thanks to all of the people which made that or working there.
+                                                The Odin Project - the place where i used to learn Web Development! 
+                                                                        https://www.theodinproject.com/
 
-Also much credits to:
-https://materialdesignicons.com/, https://iconscout.com/ & https://freesvg.org/ for the free icons, pictures and SVG's!
+                                                            Stackoverflow and the great Developers there which help me a lot!
+                                                                        https://www.stackoverflow.com/
+                                                
+                                                                To Adam for the Fireworks Vanilla-JS Animation! 
+                                                                    https://codepen.io/Adam12132/pen/gOGrwMR
 
-Assignment:
-Step 1: Set up and planning
-Set up your HTML and CSS files with some simple dummy content, just to make sure you have everything linked correctly.
-Set up your git repository (refer to past projects if you need a refresher).
-Download a full-resolution copy of the design files (desktop, tablet, mobile), and get a general idea for how you’re going to need to lay things out in your HTML document.
-Step 2: Gather Assets
-The portraits we’ve used in the design files are stock photos downloaded from pexels.com. If you don’t have a picture of yourself handy, feel free to go grab a placeholder for now.
-Select your fonts! We’re using Playfair Display and Roboto in the design, both available with Google fonts.
-In the design we have icon-links for GitHub, LinkedIn and Twitter. Obviously feel free to add whatever links you want to your own site. We got those icons from https://devicon.dev/.
-Other icons (phone, email and external link) were downloaded as SVGs from https://materialdesignicons.com/.
-Step 3: Some Tips!
-As you might expect, you can organize your work on this project however you please. We’ve given you many tips over the past several lessons, and you are likely already comfortable starting from a blank page.
-If you like being told what to do: The author of this lesson feels most comfortable starting out with the larger sections of the layout, and then working from the top of the page to the bottom. In other words, get the various sections in more or less the right place (header, projects, contact etc.) while ignoring a lot of specific style and content details, then go back through from the top-to-bottom filling-in, styling and cleaning up everything.
-It doesn’t matter when or how you accomplish the responsiveness of this project. There are people who will tell you that you should always start with the mobile experience and then use media-queries to tell your layout how to expand. The ‘mobile-first’ crew does have some good points (Google it!) but in the end, how you accomplish it doesn’t matter as long as it works. Good luck!
-When you’re done, don’t forget to push it to GitHub, and use GitHub Pages to publish it to the world! You should be proud of what you’ve accomplished here!
+Representative for all the great Youtube-Channels about Web-Development Kevin Powell, for his super useful Channel about CSS! 
+                                                                         https://www.youtube.com/kepowob
+
+                                            Iconmonstr & Simpleicon for the free SVG & PNG-Icons which i used in this project!
+                                                    https://www.iconmonstr.com/    https://www.simpleicon.org/
+                                        
+                                                                Freesound & Open Gam Art  for the free Audio-Files!
+                                                    https://www.freesound.com/  - https://www.opengameart.org/
+
+
+
+                                        It is made with Visual Studio Code, Chrome/Firefox, Git and GitHub on a Linux Ubuntu OS.
+                                                    Thanks to all of the people which made that or working there.
+
+
+
+                                                        A few words to the readers of the Javascript / CSS Files:
+The code is - as you can see - sufficiently commented. For some programmers this might seem strange, but for me and my way of 
+coding it is  extremely helpful. I like to use whitespace for formatting,  all classes start with Class_ and all id's with ID_  - and, 
+i also describe    the individual processes with comments in as much detail as possible so that I can get back to work reliably and 
+quickly after a while.    This makes working on projects for me a lot easier. I hope that this approach is also helpful for you.
+
+
+
+                                                                          Specially about this work:
+This is one of my very first works and I learned a lot programming it. My learning philosophy is very practically oriented: probably because
+I am a skilled craftsman, I learn best when, after reading a topic, I immediately start implementing it and start a project and work on it 
+until I have produced a good result. I can only give one recommendation to all those who find it difficult to deal with the often overwhelming
+            amount  of programming learning material: Go ahead and implement it! Even if not everything will work from the beginning,
+                                if you are persistent and don't give up, you will learn quickly.
+
+At the beginning of this project I thought of a maximum of one week that I will work on it. It's been almost 4 weeks now. :-)
+
+If you have any comments, suggestions for improvement or criticism of the project, please contact me! You find my actual contact here:
+                               
+                                                      https://github.com/StefanBartl/StefanBartl_Portfolio
+
+                                                                          I am very excited about it!
+
+
+                                                                                   Stefan Bartl 
+                                                                         WKDSteve / WKDMinerva
+                                                                                Vienna, Austria
+                                                                                  March, 2021
