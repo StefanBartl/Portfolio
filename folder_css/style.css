@@ -25,11 +25,10 @@ todo
 /* #region 1) general */
 
 :root {
-
   overflow-wrap: break-word;
   word-wrap: break-word;
 
- /* ==================  
+  /* ==================  
 ?   ===  Colour-Palette  ===
 .    ================== */
 
@@ -45,36 +44,43 @@ todo
   --prime-manner: hsl(10, 60%, 80%);
   --prime-lightgrey: hsl(71, 13%, 67%);
   --prime-pink: hsl(330, 100%, 50%);
-  --prime-pinkviolett: hsl(300, 100%, 50%); 
+  --prime-pinkviolett: hsl(300, 100%, 50%);
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
 
- /* =====================  
+  /* =====================  
 ?   ===  Costum Properties  ===
 .    ===================== */
-  
----background-colour: var(--main-black);
 
-/* text properties */
---text-main-colour: var(--main-white);
---text-main-font-family: Georgia, 'Times New Roman', Times, serif;
---text-optimal-width: clamp(45ch, 50%, 75ch);
+  ---background-colour: var(--main-black);
 
+  /* text properties */
+  --text-main-colour: var(--main-white);
+  --text-main-font-family: Georgia, "Times New Roman", Times, serif;
+  --text-optimal-width: clamp(45ch, 50%, 75ch);
 }
 
 /* #region Resets */
 
 /* box-sizing */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;         /* Opera/IE 8+ */
-} 
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
+}
 
 /* margins */
 body,
-h1, h2, h3, h4, h5, h6,
-figure, picture {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+picture {
   margin: 0;
 }
 
@@ -91,7 +97,7 @@ picture {
   display: block;
 }
 
-/* make form elements easier to work with */ 
+/* make form elements easier to work with */
 input,
 button,
 textarea,
@@ -100,7 +106,7 @@ select {
 }
 
 /* remove animations for people who turned them off*/
-@media (prefers-reduced-motion: reduce){
+@media (prefers-reduced-motion: reduce) {
   *,
   *::before,
   *::after {
@@ -117,14 +123,12 @@ select {
 /* Page: Sans-serif,   font-family: "Anton", sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 
-
 /* Headlines: Handwriting, font-family: "Comforter Brush", cursive; */
 @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
 
 /* #endregion */
 
 /* #endregion */
-
 
 body {
   background-color: var(---background-colour);
@@ -136,104 +140,106 @@ header,
 nav,
 ul,
 #div_socialmedia,
-#section_introduction,
 .projects {
   display: flex;
 }
 
-
-/*? header / navlist */
+/*#region header / navlist */
 
 header {
   min-width: 100vw;
-  height: 4rem;
+  height: 7vh;
+  background-color: gray;
 }
 
 #navlist {
   width: 100%;
+  align-items: center;
 }
 
 ul {
   gap: 2rem;
   width: 100%;
+  font-size: large;
+  font-weight: bold;
 }
 
-ul  :nth-child(2){
+ul :nth-child(2) {
   flex-grow: 1;
 }
 
-ul :nth-child(3){
+ul :nth-child(3) {
   margin-right: 2rem;
 }
 
 /* navlist marker styling */
-ul > li{
-  padding-left: .4rem;
+ul > li {
+  padding-left: 0.4rem;
 }
 
 li::marker {
-  font-family: 'Font Awesome 5 Free'; 
-  font-weight:  700; 
-  content: '\f054';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  content: "\f054";
 }
 /* todo hover effekt mit pseudoelementen und farbe */
 
 /*header images */
 
-#nav_translateIcon{
-  width: 2rem;
-  height: 2rem;
-}
-
-#p_translation {
-  font-size: x-small;  
-}
-
-#p_translation:hover {
-  color: red;
-}
-
-#nav_myicon{
-  min-width: 5rem;
+#nav_myicon {
   aspect-ratio: 1/1;
+  margin-right: 1rem;
 }
 
+/*#endregion */
 
-/*? first section: page introduction */ 
+/*#region first section: page introduction */
 
-#div_introduction{
+#section_introduction {
   gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5vh;
+  justify-content: center;
 }
 
-.div_introduction_description{
+#headline {
+  min-width: 100%;
+  text-align: center;
+  font-size: xx-large;
+}
+
+#div_introduction_img {
+  width: clamp(400px, 50vw, auto);
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#img_introduction {
+  height: max(400px, 60%);
+  border-radius: 3rem;
+  filter: drop-shadow(-2rem -1rem 3rem white);
+}
+
+.div_introduction_description {
+  display: flex;
+  width: 75ch;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .div_introduction_description > * {
   width: var(--text-optimal-width);
 }
 
-#div_introduction_img{
-  display: flex;
-  min-width: 50%;
-  justify-content:flex-end;
-  align-items: center;
-  filter: drop-shadow(-2rem -1rem 3rem white )
-}
+/*#endregion */
 
-#img_introduction{
-  height: 60%;
-  aspect-ratio: 1/1;
-  border-radius: 3rem;;
-}
+/*? seccond section: projects  */
 
-
-
-/*? seccond section: projects  */ 
-
-#headline_section_projects{
+#headline_section_projects {
   position: relative;
   text-align: center;
   font-size: xx-large;
@@ -250,7 +256,7 @@ li::marker {
 .images_projects {
   height: 50%;
   width: 50%;
-  filter:drop-shadow(0rem -1rem 3rem white )
+  filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 .div_projects_description {
@@ -263,20 +269,16 @@ li::marker {
   width: var(--text-optimal-width);
 }
 
-
-
 /*? footer */
 
-.img_socialmedias{
+.img_socialmedias {
   width: 2rem;
   height: 2rem;
 }
 
-#div_socialmedia :nth-child(6){
+#div_socialmedia :nth-child(6) {
   filter: invert(1);
 }
-
-
 
 /* #region bonus jobs and ideas for future */
 /*
