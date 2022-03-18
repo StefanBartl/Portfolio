@@ -112,7 +112,6 @@ select {
 
 /* #endregion */
 
-/* #region page layout */
 
 body {
   background-color: black;
@@ -128,6 +127,8 @@ ul,
 .projects {
   display: flex;
 }
+
+
 
 /* navlist */
 
@@ -148,26 +149,33 @@ ul :nth-child(3){
   margin-right: 2rem;
 }
 
+li {
+  list-style-type: none;
+}
+
+#nav_myicon{
+  width: 5rem;
+  height: 5rem;
+}
+
+#p_translation {
+  font-size: x-small;  
+}
+
 /* first section: page introduction */ 
 
 #div_introduction{
   gap: 2rem;
 }
 
-.div_introduction{
+.div_introduction_description{
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.div_introduction > * {
+.div_introduction_description > * {
   width: clamp(45ch, 50%, 75ch)
-}
-
-.div_descs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #div_introduction_img{
@@ -184,50 +192,44 @@ ul :nth-child(3){
   border-radius: 3rem;;
 }
 
+
+
 /* seccond section: projects  */ 
 
-.div_img_projects {
-  min-width: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* #endregion */
-
-/* #region typographie*/
-
-li {
-  list-style-type: none;
-}
-
-.div_descs > * {
-  width: clamp(45ch, 50%, 75ch)
-}
-
-#p_translation {
-  font-size: x-small;  
-}
-
-#headline_projects{
+#headline_section_projects{
   position: relative;
   text-align: center;
   font-size: xx-large;
   background-color: darkgray;
 }
 
-/* #endregion */
-
-/* #region */
-
-/* #endregion */
-
-/* #region media */
-
-#nav_myImage{
-  width: 5rem;
-  height: 5rem;
+.div_img_project {
+  min-width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.images_projects {
+  height: 50%;
+  width: 50%;
+  filter:drop-shadow(0rem -1rem 3rem white )
+}
+
+.div_project_description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div_project_description > * {
+  width: clamp(45ch, 50%, 75ch)
+}
+
+
+
+/* footer */
+
 
 #header_sectionLeft :nth-child(2){
   width: 1.2rem;
@@ -235,7 +237,7 @@ li {
   margin-top: .5rem;
 }
 
-.media_sm{
+.img_socialmedias{
   width: 2rem;
   height: 2rem;
 }
@@ -244,13 +246,7 @@ li {
   filter: invert(1);
 }
 
-.media_projects {
-  height: 50%;
-  width: 50%;
-  filter:drop-shadow(0rem -1rem 3rem white )
-}
 
-/* #endregion */
 
 /* #region bonus jobs and ideas for future */
 /*
