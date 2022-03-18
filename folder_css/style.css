@@ -124,10 +124,12 @@ header,
 nav,
 ul,
 #div_socialmedia,
-#div_pageDesc,
+#section_introduction,
 .projects {
   display: flex;
 }
+
+/* navlist */
 
 #navlist {
   width: 100%;
@@ -146,8 +148,20 @@ ul :nth-child(3){
   margin-right: 2rem;
 }
 
-#div_pageDesc{
+/* first section: page introduction */ 
+
+#div_introduction{
   gap: 2rem;
+}
+
+.div_introduction{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.div_introduction > * {
+  width: clamp(45ch, 50%, 75ch)
 }
 
 .div_descs {
@@ -156,7 +170,7 @@ ul :nth-child(3){
   justify-content: center;
 }
 
-#div_imgDesc{
+#div_introduction_img{
   display: flex;
   min-width: 50%;
   justify-content:flex-end;
@@ -164,11 +178,13 @@ ul :nth-child(3){
   filter:drop-shadow(-2rem -1rem 3rem white )
 }
 
-#img_pageDesc{
+#img_introduction{
   height: 60%;
   aspect-ratio: 1/1;
   border-radius: 3rem;;
 }
+
+/* seccond section: projects  */ 
 
 .div_img_projects {
   min-width: 30%;
