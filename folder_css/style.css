@@ -17,7 +17,7 @@
 !                           to-do 
 todo    default
 ?                               finish
-todo    brauchst du die sm, header icon ids? 
+todo    alle ids weg die nicht ge brajcht werden. eventuell auch viel mit nths child arbeiten 
 todo                                                                                                                                                                                             
 */
 /* #endregion */
@@ -25,9 +25,13 @@ todo
 /* #region 1) general */
 
 :root {
-     /*   ==================  
-?         ===  Colour-Palette  ===
-:          ==================  */
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+ /* ==================  
+?   ===  Colour-Palette  ===
+.    ================== */
 
   --main-black: hsl(0, 0%, 0%);
   --main-white: hsl(0, 0%, 100%);
@@ -45,8 +49,17 @@ todo
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
 
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+ /* =====================  
+?   ===  Costum Properties  ===
+.    ===================== */
+  
+---background-colour: var(--main-black);
+
+/* text properties */
+--text-main-colour: var(--main-white);
+--text-main-font-family: Georgia, 'Times New Roman', Times, serif;
+--text-optimal-width: clamp(45ch, 50%, 75ch);
+
 }
 
 /* #region Resets */
@@ -114,9 +127,9 @@ select {
 
 
 body {
-  background-color: black;
-  color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(---background-colour);
+  color: var(--text-main-colour);
+  font-family: var(--text-main-font-family);
 }
 
 header,
@@ -129,7 +142,12 @@ ul,
 }
 
 
-/*? navlist */
+/*? header / navlist */
+
+header {
+  min-width: 100vw;
+  height: 4rem;
+}
 
 #navlist {
   width: 100%;
@@ -160,9 +178,13 @@ li::marker {
 }
 /* todo hover effekt mit pseudoelementen und farbe */
 
-#nav_translateIcon{
+/*header images */
 
+#nav_translateIcon{
+  width: 2rem;
+  height: 2rem;
 }
+
 #p_translation {
   font-size: x-small;  
 }
@@ -172,9 +194,9 @@ li::marker {
 }
 
 #nav_myicon{
-
+  min-width: 5rem;
+  aspect-ratio: 1/1;
 }
-
 
 
 /*? first section: page introduction */ 
@@ -190,7 +212,7 @@ li::marker {
 }
 
 .div_introduction_description > * {
-  width: clamp(45ch, 50%, 75ch)
+  width: var(--text-optimal-width);
 }
 
 #div_introduction_img{
@@ -198,7 +220,7 @@ li::marker {
   min-width: 50%;
   justify-content:flex-end;
   align-items: center;
-  filter:drop-shadow(-2rem -1rem 3rem white )
+  filter: drop-shadow(-2rem -1rem 3rem white )
 }
 
 #img_introduction{
@@ -238,19 +260,12 @@ li::marker {
 }
 
 .div_projects_description > * {
-  width: clamp(45ch, 50%, 75ch)
+  width: var(--text-optimal-width);
 }
 
 
 
 /*? footer */
-
-
-#header_sectionLeft :nth-child(2){
-  width: 1.2rem;
-  height: 1.2rem;
-  margin-top: .5rem;
-}
 
 .img_socialmedias{
   width: 2rem;
