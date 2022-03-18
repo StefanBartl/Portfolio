@@ -196,7 +196,6 @@ li::marker {
 /*#region first section: page introduction */
 
 #section_introduction {
-  gap: 2rem;
   display: flex;
   flex-wrap: wrap;
   margin-top: 5vh;
@@ -206,7 +205,7 @@ li::marker {
 #headline {
   min-width: 100%;
   text-align: center;
-  font-size: xx-large;
+  font-size: 5rem;
 }
 
 #div_introduction_img {
@@ -224,7 +223,7 @@ li::marker {
 
 .div_introduction_description {
   display: flex;
-  width: 75ch;
+  max-width: 75ch;
   flex-direction: column;
   justify-content: center;
   text-align: center;
@@ -237,37 +236,62 @@ li::marker {
 
 /*#endregion */
 
-/*? seccond section: projects  */
+/*#region seccond section: projects  */
+
+#section_projects {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
 
 #headline_section_projects {
-  position: relative;
   text-align: center;
-  font-size: xx-large;
+  font-size: 5rem;
   background-color: darkgray;
 }
 
+.projects {
+  border: solid 1px grey;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-content: center;
+   text-align: center;
+}
+
 .div_img_projects {
-  min-width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .images_projects {
-  height: 50%;
-  width: 50%;
+  padding: 25%;
+  width: 400px;
+  aspect-ratio: 1/1;
   filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 .div_projects_description {
+  width: 75ch;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  font-size: large;
 }
 
 .div_projects_description > * {
-  width: var(--text-optimal-width);
+      width: var(--text-optimal-width);
 }
+
+.projects a {
+  color: aquamarine;
+  text-decoration: none;
+  align-self: center;
+}
+
+/*#endregion */
 
 /*? footer */
 
