@@ -1,9 +1,23 @@
 
 // get browser language
 const language = navigator.language;
+//console.log(language);
 
 if(language === "de"){
 
+    //navlist
+    translate_icon.alt="Offizielles 'Language Icon Initiative' Logo.";
+    my_icon.title = "Klicke um zum 'Protest-Blog' zu kommen!";
+    p_translation.innerText = "übersetzen";
+    p_translation.title = "Klicke um die Seite zwischen Deutsch und Englisch zu übersetzen!";
+
 } else {
+    
+    // navlist
+    translate_icon.alt="Official 'Language Icon Initiative' logo.";
+    my_icon.title = "Click to go to my 'Protest-Blog' !";
+    p_translation = "translates";
+    p_translation.title = "Click to translate page English/Deutsch !";
+
 
 }

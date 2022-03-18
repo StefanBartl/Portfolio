@@ -116,10 +116,10 @@ select {
 body {
   background-color: black;
   color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header,
-#header_sectionLeft,
 nav,
 ul,
 #div_socialmedia,
@@ -129,8 +129,7 @@ ul,
 }
 
 
-
-/* navlist */
+/*? navlist */
 
 #navlist {
   width: 100%;
@@ -149,20 +148,36 @@ ul :nth-child(3){
   margin-right: 2rem;
 }
 
-li {
-  list-style-type: none;
+/* navlist marker styling */
+ul > li{
+  padding-left: .4rem;
 }
 
-#nav_myicon{
-  width: 5rem;
-  height: 5rem;
+li::marker {
+  font-family: 'Font Awesome 5 Free'; 
+  font-weight:  700; 
+  content: '\f054';
 }
+/* todo hover effekt mit pseudoelementen und farbe */
 
+#nav_translateIcon{
+
+}
 #p_translation {
   font-size: x-small;  
 }
 
-/* first section: page introduction */ 
+#p_translation:hover {
+  color: red;
+}
+
+#nav_myicon{
+
+}
+
+
+
+/*? first section: page introduction */ 
 
 #div_introduction{
   gap: 2rem;
@@ -194,7 +209,7 @@ li {
 
 
 
-/* seccond section: projects  */ 
+/*? seccond section: projects  */ 
 
 #headline_section_projects{
   position: relative;
@@ -203,7 +218,7 @@ li {
   background-color: darkgray;
 }
 
-.div_img_project {
+.div_img_projects {
   min-width: 30%;
   display: flex;
   justify-content: center;
@@ -216,19 +231,19 @@ li {
   filter:drop-shadow(0rem -1rem 3rem white )
 }
 
-.div_project_description {
+.div_projects_description {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.div_project_description > * {
+.div_projects_description > * {
   width: clamp(45ch, 50%, 75ch)
 }
 
 
 
-/* footer */
+/*? footer */
 
 
 #header_sectionLeft :nth-child(2){
