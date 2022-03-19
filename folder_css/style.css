@@ -1,6 +1,6 @@
 /* #region table of content */
 /*    
-!                             Project  Main-CSS-Stylsheet
+!                  Project Portfolio  Main-CSS-Stylesheet
 ?                                    powered by
 !                                     Stefan Bartl
 !                      (WKDSteVIE / WKDMinerva)
@@ -8,8 +8,12 @@
 ?                  ________________________________                                                                                                                                                                                                  
 !                                   table of content
 
-?                                     1) general                                                                                                
-                                                                                                                                                                                                                                                                                                                                                                                                   */
+?                                     1) css-setup                                                                                                
+?                                     2) general
+?                                     3) header & navlist
+?                                     4) first section: page introduction                        
+?                                     5) second section: projects
+?                                     6) footer                                                                                                                                                                                                                                                                                                                                                                                    */
 /*#endregion*/
 
 /* #region jobs to-do */
@@ -17,14 +21,15 @@
 !                           to-do 
 todo    default
 ?                               finish
-todo    alle ids weg die nicht ge brajcht werden. eventuell auch viel mit nths child arbeiten 
+todo    Ersetze so viele IDs wie geht mit anderen selektoren)
 todo                                                                                                                                                                                             
 */
 /* #endregion */
 
-/* #region 1) general */
+/* #region 1) css setup */
 
 :root {
+
   overflow-wrap: break-word;
   word-wrap: break-word;
 
@@ -35,12 +40,14 @@ todo
   --main-black: hsl(0, 0%, 0%);
   --main-white: hsl(0, 0%, 100%);
   --main-red: hsl(0, 100%, 50%);
-  --main-yellowr: hsl(60, 100%, 50%);
+  --main-yellow: hsl(60, 100%, 50%);
 
   --prime-blueviolett: hsl(238, 56%, 19%);
   --prime-darkgrey: hsl(330, 2%, 17%);
   --prime-green: hsl(95, 63%, 36%);
-  --prime-yellow: hsl(43, 100%, 50%);
+  --prime-yellow-dark: hsl(43, 100%, 50%);
+  --prime-orange: hsl(24, 100%, 50%);
+  --prime-grapefruit: hsl(3, 83%, 64%);
   --prime-manner: hsl(10, 60%, 80%);
   --prime-lightgrey: hsl(71, 13%, 67%);
   --prime-pink: hsl(330, 100%, 50%);
@@ -52,12 +59,16 @@ todo
 ?   ===  Costum Properties  ===
 .    ===================== */
 
-  ---background-colour: var(--main-black);
+/* main theme */
+  --background-colour: var(--main-black);
+  --counter-colour: --main-black;
 
   /* text properties */
   --text-main-colour: var(--main-white);
   --text-main-font-family: Georgia, "Times New Roman", Times, serif;
   --text-optimal-width: clamp(45ch, 50%, 75ch);
+
+  --link-hover-color: var(--main-red);
 }
 
 /* #region Resets */
@@ -118,7 +129,7 @@ select {
 }
 /* #endregion */
 
-/*#region fonts */
+/* #region fonts */
 
 /* Page: Sans-serif,   font-family: "Anton", sans-serif; */
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
@@ -130,8 +141,10 @@ select {
 
 /* #endregion */
 
+/* #region 2) general */
+
 body {
-  background-color: var(---background-colour);
+  background-color: var(--background-colour);
   color: var(--text-main-colour);
   font-family: var(--text-main-font-family);
 }
@@ -144,12 +157,40 @@ ul,
   display: flex;
 }
 
-/*#region header / navlist */
+a {
+  color: aquamarine;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--link-hover-color);
+}
+
+/* summarized properties */
+
+#div_introduction_img , /* introduction elements */
+.div_introduction_description,
+#section_projects,  /* section projects elements */
+.div_img_projects,
+.div_projects_description ,
+footer,  /* footer elements */
+#div_socialmedia,
+#div_myblog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* #endregion */
+
+/* #region 3) header & navlist */
 
 header {
-  min-width: 100vw;
+  min-width: 100%;
   height: 7vh;
-  background-color: gray;
+  background-color: var(--counter-colour);
 }
 
 #navlist {
@@ -162,9 +203,10 @@ ul {
   width: 100%;
   font-size: large;
   font-weight: bold;
+  margin-right: 2rem;
 }
 
-ul :nth-child(2) {
+ul :nth-child(3) {
   flex-grow: 1;
 }
 
@@ -184,16 +226,14 @@ li::marker {
 }
 /* todo hover effekt mit pseudoelementen und farbe */
 
-/*header images */
-
-#nav_myicon {
+#nav_myblog {
   aspect-ratio: 1/1;
   margin-right: 1rem;
 }
 
 /*#endregion */
 
-/*#region first section: page introduction */
+/*#region 4) first section: page introduction */
 
 #section_introduction {
   display: flex;
@@ -210,9 +250,6 @@ li::marker {
 
 #div_introduction_img {
   width: clamp(400px, 50vw, auto);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 #img_introduction {
@@ -222,12 +259,7 @@ li::marker {
 }
 
 .div_introduction_description {
-  display: flex;
   max-width: 75ch;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
 }
 
 .div_introduction_description > * {
@@ -236,33 +268,24 @@ li::marker {
 
 /*#endregion */
 
-/*#region seccond section: projects  */
+/*#region 5) seccond section: projects  */
 
 #section_projects {
-  display: flex;
-  flex-direction: column;
   gap: 5rem;
 }
 
 #headline_section_projects {
   text-align: center;
   font-size: 5rem;
-  background-color: darkgray;
+  background-color: var(--counter-colour);
 }
 
 .projects {
-  border: solid 1px grey;
   flex-wrap: wrap;
   gap: 5rem;
   justify-content: center;
   align-content: center;
-   text-align: center;
-}
-
-.div_img_projects {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
 .images_projects {
@@ -274,26 +297,37 @@ li::marker {
 
 .div_projects_description {
   width: 75ch;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: large;
 }
 
 .div_projects_description > * {
-      width: var(--text-optimal-width);
+  width: var(--text-optimal-width);
 }
 
 .projects a {
-  color: aquamarine;
-  text-decoration: none;
   align-self: center;
 }
 
 /*#endregion */
 
-/*? footer */
+/*#region 6) footer */
+
+footer {
+  margin-block: 2rem;
+  gap: 2rem;
+}
+
+#headline_contact {
+  min-width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  background-color: var(--counter-colour);
+}
+
+#wrapper_socialicons {
+  display: flex;
+  gap: 1rem;
+}
 
 .img_socialmedias {
   width: 2rem;
@@ -303,6 +337,12 @@ li::marker {
 #div_socialmedia :nth-child(6) {
   filter: invert(1);
 }
+
+#div_myblog a {
+  width: 50%;
+}
+
+/* #endregion */
 
 /* #region bonus jobs and ideas for future */
 /*
