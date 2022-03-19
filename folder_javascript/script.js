@@ -20,6 +20,11 @@
 //#region Open Jobs
 /*
 ?                  to-do
+todo    Slider für Projekte.
+todo    Textanimationen  bei den Überschriften
+todo    Beim runter scrollen zum Projekt 1 soll die Projekt überschrift immer größer werden und dann weiterleiten. 3d-Effekt? 
+todo    Eigene HTML-Seite für die Credits.
+
 ?                  finish
 todo    
 ?          
