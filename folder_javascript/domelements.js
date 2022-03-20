@@ -1,3 +1,3 @@
 
 // navlist 
-my_icon = document.querySelector("#nav_myicon");
+my_icon = document.querySelector("#nav_mylogo");

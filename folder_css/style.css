@@ -168,6 +168,8 @@ section {
   color: var(--prime-pinkviolett);
 }
 
+
+/* links */
 a {
   color: var(--accent-colour-one);
   text-decoration: none;
@@ -175,6 +177,15 @@ a {
 
 a:hover {
   color: var(--link-hover-color);
+}
+
+/* negate link styling in navbar */
+li a {
+  color: white;
+}
+
+li a:hover {
+  color: var(--accent-colour-one);
 }
 
 /* summarized properties */
@@ -218,23 +229,25 @@ header {
 ul {
   gap: 2rem;
   width: 100%;
-  font-size: x-large;
+  font-size: xx-large;
   font-weight: bold;
   margin-right: 2rem;
 }
 
-ul :nth-child(3) {
-  flex-grow: 1;
-}
 
-ul :nth-child(3) {
-  margin-right: 2rem;
+ul :nth-child(4) {
+  margin-left: auto;
 }
 
 /* my icon on the right side */
-#nav_myblog {
+#nav_mylogo {
+  height: 100%;
   aspect-ratio: 1/1;
   margin-right: 1rem;
+}
+
+#nav_mylogo:hover {
+    filter: brightness(0) saturate(100%) invert(50%) sepia(70%) saturate(4251%) hue-rotate(1deg) brightness(103%) contrast(105%);
 }
 
 /* navlist marker styling */
@@ -247,15 +260,21 @@ li::marker {
   font-weight: 700;
   content: "\f054";
   font-size: small;
+  transition: all 500ms;
 }
 
 li:hover::marker {
-  color: var(--accent-colour-one);
+  color: white;
+  font-size: large;
 }
 
 /* navlist dynamic styling */
 li {
   position: relative;
+}
+
+li:hover{
+  color: var(--accent-colour-one);
 }
 
 li::after {
@@ -273,7 +292,7 @@ li:hover::after {
 }
 
 ul :nth-child(3):hover::after {
-  width: 5rem;
+  width: 6.5rem;
 }
 
 /*#endregion */
@@ -287,9 +306,8 @@ ul :nth-child(3):hover::after {
 }
 
 #headline {
-  min-width: 100%;
-  text-align: center;
   font-size: 5rem;
+  text-align: center;
 }
 
 #div_introduction_img {

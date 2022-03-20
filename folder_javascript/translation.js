@@ -7,7 +7,7 @@ if(language === "de"){
 
     //navlist
 
-    my_icon.title = "Klicke um zum 'Protest-Blog' zu kommen!";
+    my_icon.title = "Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
 
     //translate_icon.alt="Offizielles 'Language Icon Initiative' Logo.";
     //p_translation.innerText = "übersetzen";
