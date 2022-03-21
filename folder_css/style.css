@@ -19,7 +19,7 @@
 /* #region jobs to-do */
 /*
 !                           to-do 
-todo    default
+todo    test the media queriu in root if it is working that way
 ?                               finish
 todo                                                                                                                                                                                             
 */
@@ -27,17 +27,34 @@ todo
 
 /*#region 1) css setup */
 
-/* === futura font === */
+/*? ===  font(s) === */
+
+/* futura */
 @import url("https://use.typekit.net/izw3hmc.css");
+
+/* #region setup & themes  */
 
 :root {
 
   overflow-wrap: break-word;
   word-wrap: break-word;
 
---text-main-font-family: futura-pt,sans-serif;
-font-weight: 400;
-font-style: normal; 
+  --text-main-font-family: futura-pt,sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+
+  --fs-400: 1rem;
+  --fs-500: 1.125rem;
+  --fs-600: 1.375rem;
+  --fs-700: 2rem;
+
+  /* ! test that out if it is working */
+  @media (min-width: 45em){
+  --fs-400: 1.125rem;
+  --fs-500: 1.375rem;
+  --fs-600: 2.75rem;
+  --fs-700: 4.125rem;
+  }
 
   /* ==================  
 ?    ===  Colour-Palette  ===
@@ -60,17 +77,18 @@ font-style: normal;
   --prime-pinkviolett: hsl(300, 100%, 50%);
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
+
 }
 
 :root.theme_dark{
 
-/* === colour === */
+/*? === colour === */
 --background-colour: var(--main-black);
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
 
 
-/* === text === */
+/*? === text === */
 --text-main-colour: var(--main-white);
 --text-optimal-width: clamp(45ch, 50%, 75ch);
 --link-hover-color: var(--main-red);
@@ -89,7 +107,9 @@ font-style: normal;
   --text-optimal-width: clamp(45ch, 50%, 75ch);
   --link-hover-color: var(--main-red);
 
-  }
+}
+
+/* #endregion */
 
 /* #region resets */
 
@@ -147,6 +167,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
 /* #endregion */
 
 /* #endregion */
@@ -159,6 +180,8 @@ body {
   font-family: var(--text-main-font-family);
   box-shadow: inset 0 0 1rem white;
 }
+
+
 
 /* theme implementation */
 header,
@@ -242,7 +265,7 @@ header {
 ul {
   gap: 2rem;
   width: 100%;
-  font-size: xx-large;
+  font-size: var(--fs-700);
   font-weight: bold;
   margin-right: 2rem;
 }
@@ -271,13 +294,13 @@ li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
   content: "\f054";
-  font-size: medium;
+  font-size: var(--fs-500);
   transition: all 500ms;
 }
 
 li:hover::marker {
   color: var(--accent-colour-one);
-  font-size: x-large;
+  font-size: var(--fs-600);
 }
 
 /* navlist dynamic styling */
@@ -320,6 +343,7 @@ ul :nth-child(3):hover::after {
 .headline {
   font-size: 5rem;
   text-align: center;
+  padding-top: 8rem;
 }
 
 .div_introduction_img {
@@ -350,8 +374,7 @@ ul :nth-child(3):hover::after {
 }
 
 .headline_section_projects {
-  text-align: center;
-  font-size: 5rem;
+  font-size: 4rem;
   background-color: var(--counter-colour);
 }
 
@@ -364,15 +387,15 @@ ul :nth-child(3):hover::after {
 }
 
 .images_projects {
-  padding: 25%;
   width: 300px;
   aspect-ratio: 1/1;
   filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 .div_projects_description {
+  flex-grow: 2;
   width: 75ch;
-  font-size: large;
+  font-size: var(--fs-600);
 }
 
 .div_projects_description > * {
@@ -420,6 +443,6 @@ footer {
 
 /* #region bonus jobs and ideas for future */
 /*
-todo  default
+todo  neues CSS-Default-Layout als Template abspeichern!
 */
 /* #endregion */
