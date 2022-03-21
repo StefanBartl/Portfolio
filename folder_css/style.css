@@ -21,21 +21,27 @@
 !                           to-do 
 todo    default
 ?                               finish
-todo    Ersetze so viele IDs wie geht mit anderen selektoren)
 todo                                                                                                                                                                                             
 */
 /* #endregion */
 
-/* #region 1) css setup */
+/*#region 1) css setup */
+
+/* === futura font === */
+@import url("https://use.typekit.net/izw3hmc.css");
 
 :root {
 
   overflow-wrap: break-word;
   word-wrap: break-word;
 
+--text-main-font-family: futura-pt,sans-serif;
+font-weight: 400;
+font-style: normal; 
+
   /* ==================  
-?   ===  Colour-Palette  ===
-.    ================== */
+?    ===  Colour-Palette  ===
+.     ================== */
 
   --main-black: hsl(0, 0%, 0%);
   --main-white: hsl(0, 0%, 100%);
@@ -54,26 +60,38 @@ todo
   --prime-pinkviolett: hsl(300, 100%, 50%);
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
-
-  /* =====================  
-?   ===  Costum Properties  ===
-.    ===================== */
-
-/* main theme */
-  --background-colour: var(--main-black);
-  --counter-colour: var(--main-black);
-  --accent-colour-one: var(--prime-orange);
-
-
-  /* text properties */
-  --text-main-colour: var(--main-white);
-  --text-main-font-family: Georgia, "Times New Roman", Times, serif;
-  --text-optimal-width: clamp(45ch, 50%, 75ch);
-
-  --link-hover-color: var(--main-red);
 }
 
-/* #region Resets */
+:root.theme_dark{
+
+/* === colour === */
+--background-colour: var(--main-black);
+--counter-colour: var(--main-black);
+--accent-colour-one: var(--prime-orange);
+
+
+/* === text === */
+--text-main-colour: var(--main-white);
+--text-optimal-width: clamp(45ch, 50%, 75ch);
+--link-hover-color: var(--main-red);
+
+}
+
+:root.theme_orange{
+  /* colour */
+  --background-colour: var(--prime-orange);
+  --counter-colour: var(--main-black);
+  --accent-colour-one: var(--prime-pink);
+  
+  
+  /* text  */
+  --text-main-colour: var(--main-white);
+  --text-optimal-width: clamp(45ch, 50%, 75ch);
+  --link-hover-color: var(--main-red);
+
+  }
+
+/* #region resets */
 
 /* box-sizing */
 *,
@@ -131,16 +149,6 @@ select {
 }
 /* #endregion */
 
-/* #region fonts */
-
-/* Page: Sans-serif,   font-family: "Anton", sans-serif; */
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
-
-/* Headlines: Handwriting, font-family: "Comforter Brush", cursive; */
-@import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap");
-
-/* #endregion */
-
 /* #endregion */
 
 /* #region 2) general */
@@ -159,12 +167,12 @@ section {
   padding: 1rem;
 }
 
-#section_introduction h2 {
+.section_introduction h2 {
   color: var(--accent-colour-one);
 }
 
-#headline_section_projects,
-#headline_contact {
+.headline_section_projects,
+.headline_contact {
   color: var(--prime-pinkviolett);
 }
 
@@ -185,26 +193,26 @@ li a {
 }
 
 li a:hover {
-  color: var(--accent-colour-one);
+  color: white;
 }
 
 /* summarized properties */
 header,
 nav,
 ul,
-#div_socialmedia,
+.div_socialmedia,
 .projects {
   display: flex;
 }
 
-#div_introduction_img , /* introduction elements */
+.div_introduction_img , /* introduction elements */
 .div_introduction_description,
-#section_projects,  /* section projects elements */
+.section_projects,  /* section projects elements */
 .div_img_projects,
 .div_projects_description ,
 footer,  /* footer elements */
-#div_socialmedia,
-#div_myblog {
+.div_socialmedia,
+.div_myblog {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -221,7 +229,7 @@ header {
   height: max(50px, 10vh);
 }
 
-#navlist {
+.navlist {
   width: 100%;
   align-items: center;
 }
@@ -240,13 +248,13 @@ ul :nth-child(4) {
 }
 
 /* my icon on the right side */
-#nav_mylogo {
+.nav_mylogo {
   height: 100%;
   aspect-ratio: 1/1;
   margin-right: 1rem;
 }
 
-#nav_mylogo:hover {
+.nav_mylogo:hover {
     filter: brightness(0) saturate(100%) invert(50%) sepia(70%) saturate(4251%) hue-rotate(1deg) brightness(103%) contrast(105%);
 }
 
@@ -259,22 +267,19 @@ li::marker {
   font-family: "Font Awesome 5 Free";
   font-weight: 700;
   content: "\f054";
-  font-size: small;
+  font-size: medium;
   transition: all 500ms;
 }
 
 li:hover::marker {
-  color: white;
-  font-size: large;
+  color: var(--accent-colour-one);
+  font-size: x-large;
 }
 
 /* navlist dynamic styling */
 li {
   position: relative;
-}
-
-li:hover{
-  color: var(--accent-colour-one);
+  cursor: pointer;
 }
 
 li::after {
@@ -282,13 +287,16 @@ li::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: .5rem;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
   border: solid 1px var(--accent-colour-one);
   transition: all 400ms ease;
 }
 
 li:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 ul :nth-child(3):hover::after {
@@ -299,22 +307,22 @@ ul :nth-child(3):hover::after {
 
 /*#region 4) first section: page introduction */
 
-#section_introduction {
+.section_introduction {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-#headline {
+.headline {
   font-size: 5rem;
   text-align: center;
 }
 
-#div_introduction_img {
+.div_introduction_img {
   width: max(400px, 50vw);
 }
 
-#img_introduction {
+.img_introduction {
   height: max(400px, 50%);
   border-radius: 3rem;
   filter: drop-shadow(-2rem -1rem 3rem white);
@@ -333,11 +341,11 @@ ul :nth-child(3):hover::after {
 
 /*#region 5) seccond section: projects  */
 
-#section_projects {
+.section_projects {
   gap: 5rem;
 }
 
-#headline_section_projects {
+.headline_section_projects {
   text-align: center;
   font-size: 5rem;
   background-color: var(--counter-colour);
@@ -379,14 +387,14 @@ footer {
   gap: 2rem;
 }
 
-#headline_contact {
+.headline_contact {
   min-width: 100%;
   text-align: center;
   font-size: 3rem;
   background-color: var(--counter-colour);
 }
 
-#wrapper_socialicons {
+.wrapper_socialicons {
   display: flex;
   gap: 1rem;
 }
@@ -396,11 +404,11 @@ footer {
   height: 2rem;
 }
 
-#div_socialmedia :nth-child(6) {
+.div_socialmedia :nth-child(6) {
   filter: invert(1);
 }
 
-#div_myblog a {
+.div_myblog a {
   width: 50%;
 }
 
