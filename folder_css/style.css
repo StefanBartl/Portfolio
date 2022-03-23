@@ -258,6 +258,8 @@ header {
 .navlist {
   width: 100%;
   align-items: center;
+  display: flex;
+
 }
 
 ul {
@@ -297,7 +299,7 @@ li::marker {
   transition: all 500ms;
 }
 
-/* navlist dynamic styling */
+/* navlist dynamic hover styling */
 
 li {
   position: relative;
@@ -342,7 +344,7 @@ li:hover::marker {
   font-size: 5rem;
   text-align: center;
   padding-top: 8rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
 
 .div_introduction_img {
@@ -369,6 +371,7 @@ width: max(250px, 35vw);
 
 .div_introduction_description h2{
 text-align: center;
+margin-block: 2rem;
 }
 
 .div_introduction_description p {
@@ -390,7 +393,7 @@ text-align: center;
 
 .projects {
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 2rem;
   justify-content: center;
   align-content: center;
   text-align: center;
@@ -411,19 +414,41 @@ text-align: center;
 
 }
 
-.projects p {
+.projects h3 {
+  width: 60%;
   text-align: start;
-  width: var(--text-optimal-width);
 }
 
 .projects p {
+  text-align: start;
+  width: var(--text-optimal-width);
   padding-inline: 1rem;
+
 }
 
 .projects a {
   align-self: center;
   font-size: var(--fs-600);
   font-weight: bold;
+  position: relative;
+}
+
+/* link to projects dynamic hover styling */
+.projects a::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+border: solid 1px var(--link-hover-color);
+width: 100%;
+transform: scaleX(0);
+transform-origin: left;
+transition: all 500ms;
+}
+
+.projects a:hover::after{
+transform: scaleX(1);
+transform-origin: left;
 }
 
 /*#endregion */
@@ -432,6 +457,7 @@ text-align: center;
 
 footer {
   gap: 2rem;
+  margin-top: 3rem;
 }
 
 .headline_contact {
@@ -444,6 +470,7 @@ footer {
 .wrapper_socialicons {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .img_socialmedias {
@@ -451,12 +478,13 @@ footer {
   height: 2rem;
 }
 
+/* invert the all black github logo to white*/
 .div_socialmedia :nth-child(6) {
   filter: invert(1);
 }
 
-.div_myblog a {
-  width: 50%;
+.div_myblog {
+  margin-top: 2rem;
 }
 
 /* #endregion */
