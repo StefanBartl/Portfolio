@@ -86,7 +86,7 @@ todo    Bonus-Jobs durchsehen!
 --background-colour: var(--main-black);
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
-
+--shadows: var(--main-white);
 
 /*? === text === */
 --text-main-colour: var(--main-white);
@@ -100,7 +100,7 @@ todo    Bonus-Jobs durchsehen!
   --background-colour: var(--prime-orange);
   --counter-colour: var(--main-black);
   --accent-colour-one: var(--prime-pink);
-  
+  --shadows: var(--main-white);
   
   /* text  */
   --text-main-colour: var(--main-white);
@@ -178,7 +178,7 @@ body {
   background-color: var(--background-colour);
   color: var(--text-main-colour);
   font-family: var(--text-main-font-family);
-  box-shadow: inset 0 0 1rem white;
+  box-shadow: inset 0 0 1rem var(--shadows);
 }
 
 /* theme implementation */
@@ -250,8 +250,9 @@ header {
   top: 0;
   z-index: 1;
   background-color: var(--background-colour);
-  margin-top: -.7rem;
-  box-shadow: inset 0 .8rem 1rem white;
+    /* to even out the navlist background: */
+  margin-top: -1.1rem;
+  box-shadow: inset 0 1.1rem 1rem var(--shadows);
 }
 
 .navlist {
@@ -271,10 +272,12 @@ ul :nth-child(4) {
   margin-left: auto;
 }
 
-/* my icon on the right side */
+/* my logo on the right side */
 .nav_mylogo {
   height: max(30px, 10vh);
   aspect-ratio: 1/1;
+  margin-top: 1rem;
+  margin-right: 1rem;
 }
 
 .nav_mylogo:hover {
@@ -283,7 +286,7 @@ ul :nth-child(4) {
 
 /* navlist marker styling */
 ul > li {
-  padding-left: 0.4rem;
+  padding-left: 0.4em;
 }
 
 li::marker {
@@ -294,12 +297,8 @@ li::marker {
   transition: all 500ms;
 }
 
-li:hover::marker {
-  color: var(--accent-colour-one);
-  font-size: var(--fs-600);
-}
-
 /* navlist dynamic styling */
+
 li {
   position: relative;
   cursor: pointer;
@@ -322,8 +321,9 @@ li:hover::after {
   transform-origin: left;
 }
 
-ul :nth-child(3):hover::after {
-  width: 6.5rem;
+li:hover::marker {
+  color: var(--accent-colour-one);
+  font-size: var(--fs-600);
 }
 
 /*#endregion */
