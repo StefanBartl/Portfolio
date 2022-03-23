@@ -194,7 +194,7 @@ section {
 
 .headline_section_projects,
 .headline_contact {
-  color: var(--prime-pinkviolett);
+  color: var(--accent-colour-one);
 }
 
 
@@ -403,18 +403,27 @@ text-align: center;
 }
 
 .div_projects_description {
-  flex-grow: 2;
   width: 75ch;
   font-size: var(--fs-600);
 }
 
 .div_projects_description > * {
+
+}
+
+.projects p {
+  text-align: start;
   width: var(--text-optimal-width);
+}
+
+.projects p {
+  padding-inline: 1rem;
 }
 
 .projects a {
   align-self: center;
   font-size: var(--fs-600);
+  font-weight: bold;
 }
 
 /*#endregion */
