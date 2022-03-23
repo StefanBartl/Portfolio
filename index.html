@@ -38,12 +38,13 @@
 
           <nav class="navlist">
               <ul>
-                <li>home</li>
-                <li><a href="#section_projects">projects</a> </li>
-                <li>contact</li>
-                <li>credits</li>
+                <li><a href="#headline" class="navlist-start"></a> </li>
+                <li><a href="#section_projects" class="navlist-projects"></a> </li>
+                <li><a href="#headline_contact" class="navlist-contact"></a> </li>
+                <li><a href="#about" class="navlist-about"></a> </li>
+                <li  class="navlist-language"></li>
               </ul>
-              <div class="nav_mylogo">
+              <div class="navlist-mylogo">
                 <a href="https://github.com/StefanBartl" target="_blank">
                   <img src="folder_graphics/folder_icons/dev_logo.png">
                 </a>
@@ -54,21 +55,19 @@
 
     <h1 class="headline">Portfolio von Stefan Bartl</h1>
 
-    <section class="sections section_introduction">
+    <section id="section_projects" class="sections section_introduction">
 
       <div class="div_introduction_img">
-          <img src="folder_graphics/folder_images/sb_bank.jpg" alt="Me, sitting in the wood and think about the world..." class="img_introduction">
+          <img src="folder_graphics/folder_images/sb_bank.jpg" class="img_introduction">
       </div>
-      <div class="div_introduction_description">
-          <h2>Willkommen auf meiner Seite!</h2>
-          <h3>Lorem Ispums</h3>
-          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic enim officia voluptates quasi est excepturi repudiandae in adipisci illum, nisi aspernatur tenetur, vero possimus neque temporibus. Illo molestias perspiciatis eius.
-          Repellat debitis voluptas, neque nisi nihil nesciunt ullam, odio vel rem eius unde! Tenetur, deleniti quam.</p>
-          <h3>Lorem Ispums</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet ex alias iure molestiae nisi consequatur quia dicta, explicabo rerum molestias fuga esse quos architecto quas quidem natus ad aliquam atque.</p>
-          <h3>Lorem Ipsum</h3>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae quis mollitia, iste maiores veniam omnis laboriosam amet voluptatibus ipsa a provident minima laudantium veritatis dicta, adipisci magnam non, tempora possimus?</p>
-      </div>
+      <div class="div_introduction-description">
+          <h2 class="introduction-headlineOne"></h2>
+          <h3 class="introduction-headlineTwo"></h3>
+          <p class="introduction-paragraphOne"></p>
+          <h3 class="introduction-headlineThree"></h3>
+          <p class="introduction-paragraphTwo"></p>
+          <h3 class="introduction-headlineOutro"></h3>
+        </div>
     </section>
 
     <section  class="section_projects sections">
@@ -126,7 +125,7 @@
 
     <footer>
 
-      <h2 class="headline_contact">Hier kannst du mich kontaktieren</h2>
+      <h2 id="headline_contact" class="headline_contact">Hier kannst du mich kontaktieren</h2>
     
         <div class="div_socialmedia">
           <h3 class="headline_socialmedia">Über die sozialen Medien...</h3>

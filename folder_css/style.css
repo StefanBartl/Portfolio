@@ -270,19 +270,21 @@ ul {
   margin-right: 2rem;
 }
 
-ul :nth-child(4) {
+ul :nth-child(5) {
   margin-left: auto;
 }
 
+
+
 /* my logo on the right side */
-.nav_mylogo {
+.navlist-mylogo {
   height: max(30px, 10vh);
   aspect-ratio: 1/1;
   margin-top: 1rem;
   margin-right: 1rem;
 }
 
-.nav_mylogo:hover {
+.navlist-mylogo:hover {
     filter: brightness(0) saturate(100%) invert(50%) sepia(70%) saturate(4251%) hue-rotate(1deg) brightness(103%) contrast(105%);
 }
 
@@ -356,7 +358,7 @@ width: max(250px, 35vw);
   filter: drop-shadow(-2rem -1rem 3rem white);
 }
 
-.div_introduction_description {
+.div_introduction-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -365,17 +367,22 @@ width: max(250px, 35vw);
   font-size: var(--fs-500);
 }
 
-.div_introduction_description > * {
+.div_introduction-description > * {
   padding-inline: 1rem;
 }
 
-.div_introduction_description h2{
-text-align: center;
+.introduction-headlineOne {
 margin-block: 2rem;
 }
 
-.div_introduction_description p {
+.div_introduction-description p {
   align-items: center;
+}
+
+.introduction-headlineOutro {
+  color: var(--accent-colour-one);
+ margin-top: 1rem;
+ font-size: var(--fs-600);
 }
 
 /*#endregion */
