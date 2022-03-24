@@ -19,9 +19,10 @@
 /* #region jobs to-do */
 /*
 !                           to-do 
-todo    test the media querie in root if it is working that way
+todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
+todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
 ?                               finish
-todo    Bonus-Jobs durchsehen!                                                                                                                                                                                             
+todo    .                                                                                                                                                                                      
 */
 /* #endregion */
 
@@ -188,11 +189,11 @@ section {
   padding: 1rem;
 }
 
-.section_introduction h2 {
+.section-introduction h2 {
   color: var(--accent-colour-one);
 }
 
-.headline_section_projects,
+.headline_section-projects,
 .headline_contact {
   color: var(--accent-colour-one);
 }
@@ -226,10 +227,10 @@ ul,
   display: flex;
 }
 
-.div_introduction_img , /* introduction elements */
-.section_projects,  /* section projects elements */
-.div_img_projects,
-.div_projects_description ,
+.div_image-introduction , /* introduction elements */
+.section-projects,  /* section projects elements */
+.div_img-projects,
+.div_projects-description ,
 footer,  /* footer elements */
 .div_socialmedia,
 .div_myblog {
@@ -340,7 +341,7 @@ li:hover::marker {
 
 /*#region 4) first section: page introduction */
 
-.section_introduction {
+.section-introduction {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -355,11 +356,11 @@ li:hover::marker {
   margin-bottom: 4rem;
 }
 
-.div_introduction_img {
+.div_image-introduction {
 width: max(250px, 35vw);
 }
 
-.img_introduction {
+.image-introduction {
   border-radius: 3rem;
   filter: drop-shadow(-2rem -1rem 3rem white);
 }
@@ -395,11 +396,11 @@ margin-block: 2rem;
 
 /*#region 5) seccond section: projects  */
 
-.section_projects {
+.section-projects {
   gap: 5rem;
 }
 
-.headline_section_projects {
+.headline_section-projects {
   font-size: 4rem;
   background-color: var(--counter-colour);
 }
@@ -412,19 +413,15 @@ margin-block: 2rem;
   text-align: center;
 }
 
-.images_projects {
+.image-projects {
   width: 300px;
   aspect-ratio: 1/1;
   filter: drop-shadow(0rem -1rem 3rem white);
 }
 
-.div_projects_description {
+.div_projects-description {
   width: 75ch;
   font-size: var(--fs-600);
-}
-
-.div_projects_description > * {
-
 }
 
 .projects h3 {
