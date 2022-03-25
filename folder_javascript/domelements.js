@@ -47,16 +47,6 @@ if(document.querySelector(".section-projects")){
 };
 //#endregion
 
-//#region footer
-if(document.querySelector(".footer")){
-     contact_headline = document.querySelector(".headline-contact");
-     contact_socialmedia_headline = document.querySelector(".headline-socialmedia");
-     contact_myblog_headline = document.querySelector(".headline-myblog");
-     contact_myblog_image = document.querySelector(".footer-myblog-image");
-     contact_myemail = document.querySelector(".myemail");
-};
-//#endregion
-
 // ! about page
 //#region section about
 if(document.querySelector(".section-about")){
@@ -67,7 +57,18 @@ if(document.querySelector(".section-about")){
      about_paragraph_one = document.querySelector(".about-paragraph-one");
      about_paragraph_two = document.querySelector(".about-paragraph-two");
      about_paragraph_three = document.querySelector(".about-paragraph-three");
+     about_paragraph_four = document.querySelector(".about_paragraph_four");
      about_image_map= document.querySelector(".about-image-map");
      about_image_donaumarina = document.querySelector(".about-image-donaumarina");
+};
+//#endregion
+
+//#region section-contacts
+if(document.querySelector(".section-contacts")){
+     contact_headline = document.querySelector(".headline-contact");
+     contact_socialmedia_headline = document.querySelector(".headline-socialmedia");
+     contact_myblog_headline = document.querySelector(".headline-myblog");
+     contact_myblog_image = document.querySelector(".section-contacts-myblog-image");
+     contact_myemail = document.querySelector(".myemail");
 };
 //#endregion

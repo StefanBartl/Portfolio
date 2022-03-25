@@ -22,19 +22,19 @@ function general_translation(language) {
           //#region  navlist deutsch
           navlist_start.innerText = "start";
           navlist_start.title = "Zurück zum Start!";
-          navlist_start.alt = "Zurück zum Start";
+          navlist_start.alt = "Zurück zum Start.";
           navlist_projects.innerText = "projekte";
           navlist_projects.title = "Zu den Projekten!";
-          navlist_projects.alt = "Zu den Projekten";
+          navlist_projects.alt = "Zu den Projekten.";
           navlist_contact.innerText = "kontakt";
           navlist_contact.title = "Zu den Kontaktöglichkeiten!";
-          navlist_contact.alt = "Zu den Kontaktöglichkeiten";
+          navlist_contact.alt = "Zu den Kontaktöglichkeiten.";
           navlist_about.innerText = "über";
-          navlist_about.title = "Über diese Seite!";
-          navlist_about.alt = "Über diese Seite";
+          navlist_about.title = "Über diese Seite und meine Person!";
+          navlist_about.alt = "Über diese Seite und meine Person.";
           navlist_language.innerText = "english";
-          navlist_language.title = "Switch to English";
-          navlist_language.alt = "Switch to English";
+          navlist_language.title = "Switch to English!";
+          navlist_language.alt = "Switch to English.";
           navlist_myicon.title =
             "Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
           navlist_myicon.alt =
@@ -47,19 +47,19 @@ function general_translation(language) {
         //#region navlist english
           navlist_start.innerText = "home";
           navlist_start.title = "Back to home!";
-          navlist_start.alt = "Back to home";
+          navlist_start.alt = "Back to home.";
           navlist_projects.innerText = "projects";
           navlist_projects.title = "Go to projects!";
-          navlist_projects.alt = "Go to projects";
+          navlist_projects.alt = "Go to projects.";
           navlist_contact.innerText = "contact";
           navlist_contact.title = "Go to contact!";
-          navlist_contact.alt = "To contact";
+          navlist_contact.alt = "To contact.";
           navlist_about.innerText = "about";
-          navlist_about.title = "About this site!";
-          navlist_about.alt = "About this site";
+          navlist_about.title = "About this site ans me as person!";
+          navlist_about.alt = "About this site and me as person.";
           navlist_language.innerText = "deutsch";
           navlist_language.title = "Zu Deutsch wechseln!";
-          navlist_language.alt = "Zu Deutsch wechseln";
+          navlist_language.alt = "Zu Deutsch wechseln.";
           navlist_myicon.title = "My motto: love science, technology & peace!";
           navlist_myicon.alt =
             "Logo with my motto: love science, technology & peace!";
@@ -110,14 +110,7 @@ function home_translation(language) {
         project_three_link.innerText = "Drei gewinnt geht immer !";
         project_four_link.innerText = "Schnick, Schnack, Schnuck !";
         //#endregion
-        //#region footer deutsch
-        contact_headline.innerText = "Hier kannst du mich kontaktieren";
-        contact_socialmedia_headline.innerText = "Über die sozialen Medien..."; 
-        contact_myblog_headline.innerText = "...schau auf meinen Blog vorbei...";
-        contact_myblog_image.title = "Hier gehts zu meinen deutschsprachigen Blog über die Gesellschaft, Politik und Wissenschaft!";
-        contact_myblog_image.alt = "Eine rote Faust in einem grünen Kreis und zwei Sterne mit der Aufschrift: protestblog.eu - Be Heard!";
-        contact_myemail.innerText = "...oder via E-Mail"; 
-        //#endregion
+
         //console.log(`Home translated to Deutsch`);
       };
       if (language !== "de") {
@@ -155,14 +148,6 @@ function home_translation(language) {
         project_three_link.innerText = "3-in-a-row is always possible!";
         project_four_link.innerText = "Rock Paper Scissors !";
         //#endregion    
-        //#region footer english
-        contact_headline.innerText = "Here you can contact me";
-        contact_socialmedia_headline.innerText = "via social media..."; 
-        contact_myblog_headline.innerText = "...check out my (german) blog...";
-        contact_myblog_image.title = "Click here for my german speaking blog about society, politics and science!";
-        contact_myblog_image.alt = "Red fist with green circle, two stars and the text 'protestblog.eu - be heard!' around it.";
-        contact_myemail.innerText = "...or via e-mail"; 
-        //#endregion
         
         //console.log(`Home translated to english`);
       };
@@ -181,18 +166,23 @@ function about_translation(language) {
       about_headline_two.innerText = "Danke";
       about_headline_three.innerText = "Zu meiner Person";
       about_paragraph_one.innerText = "Diese Webpage ist als Portfolio für meine Web-Development Projekte konzipiert. Es soll einen Überblick über meine Fähigkeiten in den Bereichen HTML, CSS, Javascript & Design ermöglichen und für mich selbst auch als Lernkurven-Archiv dienen. Bitte beachte, dass ich deswegen ältere Projekte nicht mit neu erlernten Fähigkeiten erweitere, sondern - wenn sinnvoll - ein neues Projekt daraus mache. Ich hoffe du hast Spaß mit meiner Artbeit !";
-      about_paragraph_two.innerText = `Auf meinem Github-Repository findet man eine Readme-Datei mit allen Kollektiven, Künstlern, Developern, Unternehmen usw... ohne dennen ich kein Webentwickler geworden wäre. Stellvertretend für alle möchte ich hier auf das 'Odin-Projekt' (https://www.theodinproject.com/) verweisen, welches ich für alle Anfänger, aber auch für bereits erfahrenere Webentwickler sehr empfehlen kann. Im Bereich CSS möchte ich sämtlichen Web-Content von Kevin Powell (https://www.youtube.com/kepowob) empfehlen, dessen Videos und Kurse mir sehr weitergeholfen haben. Abschließend möchte ich ein großes und herzliches Danke an meine Freunde und meine Familie richten, die mich stets bei meinen Interessen sehr unterstützen und aufs neue motivieren. 
-      
-      Ich danke euch allen von Herzen !`;
-      about_paragraph_three.innerText = `Stefan Bartl, geboren 1990 in St.Pölten, lebt in Wien, Österreich. Stets technisch interessiert verschlug es mich beruflich zuerst in das Baugewerbe. Ich absolvierte eine Lehre zum Maurer/Schalungsbauer und schloß diese mit Auszeichnung ab. Nach 6 Jahren wechselte ich in den Österreichischen Gewerkschaftsbund um meine gesellschaftspolitischen Interessen zu verwirklichen und dabei für diejenigen Menschen etwas gutes zu tun, die es sich oft nicht selbst richten können und politisch unterrepräsentiert sind. 
-      Als Gewerkschafter konnte ich bis heute mehrjährige Management-Erfahrung, zahlreiche Ausbildungen, Skills & Fertigkeiten u.a. in den Bereichen Rhetorik, Gruppendynamik, Personalführung, Veranstaltungsmanagement, Budgetpolitik, Betriebs-und Volkswirtschaft, politische Ökonomie usw. ansammeln.  Seit 2021 fülle ich meine gesamte Freizeit mit Kursen und eigener Weiterbildung im Bereich der Webentwicklung. Seither hat mich das 'Programmierer'-Fieber gepackt und gehe total in dieser herausfordernden, kreativen und wunderschönen Tätigkeit auf. 
-      
-      Kurzum, mit folgenden drei-einhalb Worten beschreibt man mich: Science, Tech, Frieden(-spolitik) !`;
+      about_paragraph_two.innerText = "Auf meinem Github-Repository findet man eine Readme-Datei mit allen Kollektiven, Künstlern, Developern, Unternehmen usw... ohne dennen ich kein Webentwickler geworden wäre. Stellvertretend für alle möchte ich hier auf das 'Odin-Projekt' (https://www.theodinproject.com/) verweisen, welches ich für alle Anfänger, aber auch für bereits erfahrenere Webentwickler sehr empfehlen kann. Im Bereich CSS möchte ich sämtlichen Web-Content von Kevin Powell (https://www.youtube.com/kepowob) empfehlen, dessen Videos und Kurse mir sehr weitergeholfen haben. Abschließend möchte ich ein großes und herzliches Danke an meine Freunde und meine Familie richten, die mich stets bei meinen Interessen sehr unterstützen und aufs neue motivieren.\n\nIch danke euch allen von Herzen !";
+      about_paragraph_three.innerText = "Stefan Bartl, geboren 1990 in St.Pölten, lebt in Wien, Österreich. Stets technisch interessiert verschlug es mich beruflich zuerst in das Baugewerbe. Ich absolvierte eine Lehre zum Maurer/Schalungsbauer und schloß diese mit Auszeichnung ab. Nach 6 Jahren wechselte ich in den Österreichischen Gewerkschaftsbund um meine gesellschaftspolitischen Interessen zu verwirklichen und dabei für diejenigen Menschen etwas gutes zu tun, die es sich oft nicht selbst richten können und politisch unterrepräsentiert sind. Als Gewerkschafter konnte ich bis heute mehrjährige Management-Erfahrung, zahlreiche Ausbildungen, Skills & Fertigkeiten u.a. in den Bereichen Rhetorik, Gruppendynamik, Personalführung, Veranstaltungsmanagement, Budgetpolitik, Betriebs-und Volkswirtschaft, politische Ökonomie usw. ansammeln.  Seit 2021 fülle ich meine gesamte Freizeit mit Kursen und eigener Weiterbildung im Bereich der Webentwicklung. Seither hat mich das 'Programmierer'-Fieber gepackt und gehe total in dieser herausfordernden, kreativen und wunderschönen Tätigkeit auf.";
+      about_paragraph_four.innerText = "Kurzum, mit folgenden drei-einhalb Worten beschreibt man mich: Science, Tech, Frieden(-spolitik) !";
       about_image_map.title = "Mein zuhause - im Herzen Europas. Besuche mich und ich zeige dir die blühende Stadt Wien!";
       about_image_map.alt = "Eine Google-Maps Karte von Europa mit einer Markierung in Wien.";
       about_image_donaumarina.title = "In der Stadt an der Donau zu leben ist auf viele Arten wunderbar. Die gute Infrastruktur erlaubt mir mich global zu vernetzen und zu arbeiten.";
       about_image_donaumarina.alt = "Ein Foto das Stefan an einer kultigen Location an der Donau zeigt.";
       //#endregion
+      //#region section-contacts deutsch
+      contact_headline.innerText = "Hier kannst du mich kontaktieren";
+      contact_socialmedia_headline.innerText = "Über die sozialen Medien..."; 
+      contact_myblog_headline.innerText = "...schau auf meinen Blog vorbei...";
+      contact_myblog_image.title = "Hier gehts zu meinen deutschsprachigen Blog über die Gesellschaft, Politik und Wissenschaft!";
+      contact_myblog_image.alt = "Eine rote Faust in einem grünen Kreis und zwei Sterne mit der Aufschrift: protestblog.eu - Be Heard!";
+      contact_myemail.innerText = "...oder via E-Mail"; 
+      //#endregion
+      
       //console.log(`About translated to Deutsch`);
     };
     if (language !== "de") {
@@ -202,18 +192,23 @@ function about_translation(language) {
       about_headline_two.innerText = "Thanks";
       about_headline_three.innerText = "To my person";
       about_paragraph_one.innerText = "This webpage is designed as a portfolio for my web development projects. It should provide an overview of my skills in the areas of HTML, CSS, Javascript & Design and also serve as a learning curve archive for myself. Please note that I do not expand older projects with newly learned skills, but - if useful - make a new project out of it. I hope you enjoy my work !";
-      about_paragraph_two.innerText = `On my Github repository you can find a readme file with all the collectives, artists, developers, companies, etc... without it I wouldn't have become a web developer. On behalf of everyone, I would like to refer to the 'Odin project' (https://www.theodinproject.com/), which I can highly recommend for all beginners, but also for more experienced web developers. In the area of ​​CSS, I would like to recommend all web content by Kevin Powell (https://www.youtube.com/kepowob), whose videos and courses have helped me a lot. Finally, I would like to say a big and heartfelt thank you to my friends and family, who always support me in my interests and motivate me new.
-      
-      Thank you all from the bottom of my heart !`;
-      about_paragraph_three.innerText = `Stefan Bartl, born in St.Pölten in 1990, lives in Vienna, Austria. Always interested in technology, my first job ended up in the construction industry. I completed an apprenticeship as a bricklayer/formwork builder and completed it with distinction. After 6 years I switched to the Austrian Trade Union Confederation to realize my socio-political interests and to do something good for those people who often cannot do it themselves and are politically underrepresented.
-      As a trade unionist, I have been able to accumulate several years of management experience, numerous training courses, skills and abilities in the areas of rhetoric, group dynamics, personnel management, event management, budget policy, business and economics, political economy, etc. Since 2021 I have been filling all my free time with courses and my own further education in the field of web development. Since then I've been gripped by the 'programmer' fever and I'm totally absorbed in this challenging, creative and beautiful job.
-      
-      In short, the following three and a half words describe me: science, tech, peace(-politics) !`;
+      about_paragraph_two.innerText = "On my Github repository you can find a readme file with all the collectives, artists, developers, companies, etc... without it I wouldn't have become a web developer. On behalf of everyone, I would like to refer to the 'Odin project' (https://www.theodinproject.com/), which I can highly recommend for all beginners, but also for more experienced web developers. In the area of ​​CSS, I would like to recommend all web content by Kevin Powell (https://www.youtube.com/kepowob), whose videos and courses have helped me a lot. Finally, I would like to say a big and heartfelt thank you to my friends and family, who always support me in my interests and motivate me new.\n\nThank you all from the bottom of my heart !";
+      about_paragraph_three.innerText = "Stefan Bartl, born in St.Pölten in 1990, lives in Vienna, Austria. Always interested in technology, my first job ended up in the construction industry. I completed an apprenticeship as a bricklayer/formwork builder and completed it with distinction. After 6 years I switched to the Austrian Trade Union Confederation to realize my socio-political interests and to do something good for those people who often cannot do it themselves and are politically underrepresented. As a trade unionist, I have been able to accumulate several years of management experience, numerous training courses, skills and abilities in the areas of rhetoric, group dynamics, personnel management, event management, budget policy, business and economics, political economy, etc. Since 2021 I have been filling all my free time with courses and my own further education in the field of web development. Since then I've been gripped by the 'programmer' fever and I'm totally absorbed in this challenging, creative and beautiful job.";
+      about_paragraph_four.innerText = "In short, the following three and a half words describe me: science, tech, peace(-politics) !";
       about_image_map.title = "My home - in the heart of Europe. Visit me and I'll show you the thriving city of Vienna!";
       about_image_map.alt = "A Google Maps map of Europe with a marker in Vienna.";
       about_image_donaumarina.title = "Living in the city on the Danube is wonderful in many ways. The good infrastructure allows me to network and work globally.";
       about_image_donaumarina.alt = "A photo that shows Stefan at a cult location on the Danube.";
       //#endregion
+      //#region section-contacts english
+      contact_headline.innerText = "Here you can contact me";
+      contact_socialmedia_headline.innerText = "via social media..."; 
+      contact_myblog_headline.innerText = "...check out my (german) blog...";
+      contact_myblog_image.title = "Click here for my german speaking blog about society, politics and science!";
+      contact_myblog_image.alt = "Red fist with green circle, two stars and the text 'protestblog.eu - be heard!' around it.";
+      contact_myemail.innerText = "...or via e-mail"; 
+      //#endregion
+
       //console.log(`About translated to english`);
     };
 };
