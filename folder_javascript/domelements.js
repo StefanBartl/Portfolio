@@ -27,32 +27,32 @@ if(document.querySelector(".section-introduction")){
 
 //#region section projects
 if(document.querySelector(".section-projects")){
-     projects_section_headline = document.querySelector(".headline_section-projects");
+     projects_section_headline = document.querySelector(".headline-section-projects");
      project_one_image = document.querySelector(".image-project-one");
      project_two_image = document.querySelector(".image-project-two");
      project_three_image = document.querySelector(".image-project-three");
      project_four_image = document.querySelector(".image-project-four");
-     project_one_headline = document.querySelector(".h3_project-one");
-     project_two_headline = document.querySelector(".h3_project-two");
-     project_three_headline = document.querySelector(".h3_project-three");
-     project_four_headline = document.querySelector(".h3_project-four");
-     project_one_description = document.querySelector(".p_project-one");
-     project_two_description = document.querySelector(".p_project-two");
-     project_three_description = document.querySelector(".p_project-three");
-     project_four_description = document.querySelector(".p_project-four");
-     project_one_link = document.querySelector(".link_project-one");
-     project_two_link = document.querySelector(".link_project-two");
-     project_three_link = document.querySelector(".link_project-three");
-     project_four_link = document.querySelector(".link_project-four");
+     project_one_headline = document.querySelector(".h3-project-one");
+     project_two_headline = document.querySelector(".h3-project-two");
+     project_three_headline = document.querySelector(".h3-project-three");
+     project_four_headline = document.querySelector(".h3-project-four");
+     project_one_description = document.querySelector(".p-project-one");
+     project_two_description = document.querySelector(".p-project-two");
+     project_three_description = document.querySelector(".p-project-three");
+     project_four_description = document.querySelector(".p-project-four");
+     project_one_link = document.querySelector(".link-project-one");
+     project_two_link = document.querySelector(".link-project-two");
+     project_three_link = document.querySelector(".link-project-three");
+     project_four_link = document.querySelector(".link-project-four");
 };
 //#endregion
 
 //#region footer
 if(document.querySelector(".footer")){
-     contact_headline = document.querySelector(".headline_contact");
-     contact_socialmedia_headline = document.querySelector(".headline_socialmedia");
-     contact_myblog_headline = document.querySelector(".headline_myblog");
-     contact_myblog_image = document.querySelector(".footer_myblog-image");
+     contact_headline = document.querySelector(".headline-contact");
+     contact_socialmedia_headline = document.querySelector(".headline-socialmedia");
+     contact_myblog_headline = document.querySelector(".headline-myblog");
+     contact_myblog_image = document.querySelector(".footer-myblog-image");
      contact_myemail = document.querySelector(".myemail");
 };
 //#endregion
@@ -67,5 +67,7 @@ if(document.querySelector(".section-about")){
      about_paragraph_one = document.querySelector(".about-paragraph-one");
      about_paragraph_two = document.querySelector(".about-paragraph-two");
      about_paragraph_three = document.querySelector(".about-paragraph-three");
+     about_image_map= document.querySelector(".about-image-map");
+     about_image_donaumarina = document.querySelector(".about-image-donaumarina");
 };
 //#endregion

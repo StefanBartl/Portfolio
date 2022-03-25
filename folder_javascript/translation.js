@@ -188,6 +188,10 @@ function about_translation(language) {
       Als Gewerkschafter konnte ich bis heute mehrjährige Management-Erfahrung, zahlreiche Ausbildungen, Skills & Fertigkeiten u.a. in den Bereichen Rhetorik, Gruppendynamik, Personalführung, Veranstaltungsmanagement, Budgetpolitik, Betriebs-und Volkswirtschaft, politische Ökonomie usw. ansammeln.  Seit 2021 fülle ich meine gesamte Freizeit mit Kursen und eigener Weiterbildung im Bereich der Webentwicklung. Seither hat mich das 'Programmierer'-Fieber gepackt und gehe total in dieser herausfordernden, kreativen und wunderschönen Tätigkeit auf. 
       
       Kurzum, mit folgenden drei-einhalb Worten beschreibt man mich: Science, Tech, Frieden(-spolitik) !`;
+      about_image_map.title = "Mein zuhause - im Herzen Europas. Besuche mich und ich zeige dir die blühende Stadt Wien!";
+      about_image_map.alt = "Eine Google-Maps Karte von Europa mit einer Markierung in Wien.";
+      about_image_donaumarina.title = "In der Stadt an der Donau zu leben ist auf viele Arten wunderbar. Die gute Infrastruktur erlaubt mir mich global zu vernetzen und zu arbeiten.";
+      about_image_donaumarina.alt = "Ein Foto das Stefan an einer kultigen Location an der Donau zeigt.";
       //#endregion
       //console.log(`About translated to Deutsch`);
     };
@@ -205,6 +209,10 @@ function about_translation(language) {
       As a trade unionist, I have been able to accumulate several years of management experience, numerous training courses, skills and abilities in the areas of rhetoric, group dynamics, personnel management, event management, budget policy, business and economics, political economy, etc. Since 2021 I have been filling all my free time with courses and my own further education in the field of web development. Since then I've been gripped by the 'programmer' fever and I'm totally absorbed in this challenging, creative and beautiful job.
       
       In short, the following three and a half words describe me: science, tech, peace(-politics) !`;
+      about_image_map.title = "My home - in the heart of Europe. Visit me and I'll show you the thriving city of Vienna!";
+      about_image_map.alt = "A Google Maps map of Europe with a marker in Vienna.";
+      about_image_donaumarina.title = "Living in the city on the Danube is wonderful in many ways. The good infrastructure allows me to network and work globally.";
+      about_image_donaumarina.alt = "A photo that shows Stefan at a cult location on the Danube.";
       //#endregion
       //console.log(`About translated to english`);
     };

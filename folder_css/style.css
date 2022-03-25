@@ -13,7 +13,8 @@
 ?                                     3) header & navlist
 ?                                     4) first section: page introduction                        
 ?                                     5) second section: projects
-?                                     6) footer                                                                                                                                                                                                                                                                                                                                                                                    */
+?                                     6) footer              
+?                                     7) about page                                                                                                                                                                                                                                                                                                                                                                      */
 /*#endregion*/
 
 /* #region jobs to-do */
@@ -21,6 +22,10 @@
 !                           to-do 
 todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
 todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
+todo    about page: Mach eine Fotoserie daraus mit hovers, damit sich da was tut. 
+todo    about page Map muss gemacht werden (Farbanpaasung + Marker in Wien [vielleicht mit hover ])
+todo    slider bei bottom?
+
 ?                               finish
 todo    .                                                                                                                                                                                      
 */
@@ -193,7 +198,7 @@ section {
   color: var(--accent-colour-one);
 }
 
-.headline_section-projects,
+.headline-section-projects,
 .headline-contact {
   color: var(--accent-colour-one);
 }
@@ -222,18 +227,18 @@ li a:hover {
 header,
 nav,
 ul,
-.div_socialmedia,
+.div-socialmedia,
 .projects {
   display: flex;
 }
 
-.div_image-introduction , /* introduction elements */
+.div-image-introduction , /* introduction elements */
 .section-projects,  /* section projects elements */
 .div_img-projects,
-.div_projects-description ,
+.div-projects-description ,
 footer,  /* footer elements */
-.div_socialmedia,
-.div_myblog {
+.div-socialmedia,
+.div-myblog {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -249,7 +254,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   background-color: var(--background-colour);
     /* to even out the navlist background: */
   margin-top: -1.1rem;
@@ -260,7 +265,6 @@ header {
   width: 100%;
   align-items: center;
   display: flex;
-
 }
 
 ul {
@@ -271,10 +275,9 @@ ul {
   margin-right: 2rem;
 }
 
-
 /* my logo on the right side */
 .navlist-mylogo {
-  height: max(30px, 10vh);
+  height: max(80px, 8vh);
   aspect-ratio: 1/1;
   margin-top: 1rem;
   margin-right: 1rem;
@@ -356,7 +359,7 @@ li:hover::marker {
   margin-bottom: 4rem;
 }
 
-.div_image-introduction {
+.div-image-introduction {
 width: max(250px, 35vw);
 }
 
@@ -372,10 +375,8 @@ width: max(250px, 35vw);
   width: 50ch;
   max-width: 75ch; 
   font-size: var(--fs-500);
-}
-
-.div_introduction-description > * {
-  padding-inline: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .introduction-headline-one {
@@ -384,6 +385,7 @@ margin-block: 2rem;
 
 .div_introduction-description p {
   align-items: center;
+  padding-left: 3rem;
 }
 
 .introduction-headline-outro {
@@ -400,7 +402,7 @@ margin-block: 2rem;
   gap: 5rem;
 }
 
-.headline_section-projects {
+.headline-section-projects {
   font-size: 4rem;
   background-color: var(--counter-colour);
 }
@@ -419,9 +421,11 @@ margin-block: 2rem;
   filter: drop-shadow(0rem -1rem 3rem white);
 }
 
-.div_projects-description {
+.div-projects-description {
   width: 75ch;
   font-size: var(--fs-600);
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .projects h3 {
@@ -432,8 +436,7 @@ margin-block: 2rem;
 .projects p {
   text-align: start;
   width: var(--text-optimal-width);
-  padding-inline: 1rem;
-
+  padding-left: 3rem;
 }
 
 .projects a {
@@ -441,6 +444,8 @@ margin-block: 2rem;
   font-size: var(--fs-600);
   font-weight: bold;
   position: relative;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* link to projects dynamic hover styling */
@@ -477,7 +482,7 @@ footer {
   background-color: var(--counter-colour);
 }
 
-.wrapper_socialicons {
+.wrapper-socialicons {
   display: flex;
   gap: 1rem;
   margin-top: 1rem;
@@ -489,27 +494,102 @@ footer {
 }
 
 /* invert the all black github logo to white*/
-.div_socialmedia :nth-child(6) {
+.div-socialmedia :nth-child(6) {
   filter: invert(1);
 }
 
-.div_myblog {
+.div-myblog {
   margin-top: 2rem;
 }
 
 /* #endregion */
 
-/*#region about-page */
-.section-about{
-  width: 100%;
-  margin-left: 5rem;
-  padding-top: 10rem;
-  width: var(--text-optimal-width);
-}
+/*#region 7) about-page */
 
 .about-headline {
-  margin-bottom: 2rem;
+  font-size: 4rem;
+  position: absolute;
+  left: 40%;
+  top: 17rem;
 }
+
+.section-about{
+  width: 100%;
+  padding-top: 12rem;
+  padding-left:  1rem;
+  padding-right: 3rem;
+  display: flex;
+}
+
+.about-div-description {
+  width: var(--text-optimal-width);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.about-div-description  h2 {
+  color: var(--accent-colour-one);
+}
+
+.about-div-description  p {
+  padding-left: 3rem;
+}
+
+.about-signature {
+  width: 50%;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-div-map {
+  margin-top: 15rem;
+}
+
+.div-map {
+  position: relative;
+}
+
+.div-map::after {
+  content: "";
+  position: absolute;
+  top: 43%;
+  right: 38%;
+  width: 2rem;
+  height: 2rem;
+  border: solid 3px var(--accent-colour-one);
+  border-style: dashed;
+  border-radius: 50%;
+  transition: all 500ms;
+}
+
+.div-map:hover::after {
+  border-color: var(--prime-pinkviolett);
+  transform: scale(2);
+}
+
+.about-image-map {
+  filter: grayscale(.8);
+}
+
+.about-image-donaumarina {
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  position: absolute;
+  top: -.5rem;
+  left: -.5rem;
+  border-radius: 8%;
+  border: dashed 5px var(--accent-colour-one);
+  border-width: 10px;
+  border-style: ridge;
+  box-shadow: 0 0 .5rem var(--shadows);
+}
+
+.about-images {
+
+}
+
 /*#endregion */
 
 
