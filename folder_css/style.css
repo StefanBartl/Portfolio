@@ -499,6 +499,20 @@ footer {
 
 /* #endregion */
 
+/*#region about-page */
+.about-div{
+  width: 100%;
+  margin-left: 5rem;
+  padding-top: 10rem;
+  width: var(--text-optimal-width);
+}
+
+.about-headline {
+  margin-bottom: 2rem;
+}
+/*#endregion */
+
+
 /* #region bonus jobs and ideas for future */
 /*
 todo  neues CSS-Default-Layout als Template abspeichern!

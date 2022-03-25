@@ -35,8 +35,8 @@ todo
 //#region page setting up
 // get setted language from local storage or browser language 
 const language = localStorage.language || navigator.language;
-translation(language);
-
+general_translation(language);
+home_translation(language);
 //#endregion
 
 //#region 4) bonus jobs & ideas for future
