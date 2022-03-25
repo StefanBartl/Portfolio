@@ -194,7 +194,7 @@ section {
 }
 
 .headline_section-projects,
-.headline_contact {
+.headline-contact {
   color: var(--accent-colour-one);
 }
 
@@ -378,7 +378,7 @@ width: max(250px, 35vw);
   padding-inline: 1rem;
 }
 
-.introduction-headlineOne {
+.introduction-headline-one {
 margin-block: 2rem;
 }
 
@@ -386,7 +386,7 @@ margin-block: 2rem;
   align-items: center;
 }
 
-.introduction-headlineOutro {
+.introduction-headline-outro {
   color: var(--accent-colour-one);
  margin-top: 1rem;
  font-size: var(--fs-600);
@@ -470,7 +470,7 @@ footer {
   margin-top: 3rem;
 }
 
-.headline_contact {
+.headline-contact {
   min-width: 100%;
   text-align: center;
   font-size: 3rem;
@@ -500,7 +500,7 @@ footer {
 /* #endregion */
 
 /*#region about-page */
-.about-div{
+.section-about{
   width: 100%;
   margin-left: 5rem;
   padding-top: 10rem;

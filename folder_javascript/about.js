@@ -1,6 +1,6 @@
 //#region Table of Content
 /*
-!                         Project Main-Javascript-File
+!                               About-Javascript-File
 ?                                      powered by
 !                                      Stefan Bartl
 !                        (WKDSteVIE / WKDMinerva)
@@ -20,15 +20,10 @@
 //#region Open Jobs
 /*
 ?                  to-do
-todo    Readme Dateien herrichten
-todo    Slider für Projekte.
-todo    Textanimationen  bei den Überschriften
-todo    Beim runter scrollen zum Projekt 1 soll die Projekt überschrift immer größer werden und dann weiterleiten. 3d-Effekt? 
-todo    Eigene HTML-Seite für die Credits.
-todo    Landkarte im Farb-Theme Design einbauen
+todo    
 
 ?                  finish
-todo    Lebenslauf anhängen und auch auf Englisch    
+todo    
 ?          
 */
 //#endregion
@@ -37,7 +32,7 @@ todo    Lebenslauf anhängen und auch auf Englisch
 // get setted language from local storage or browser language 
 const language = localStorage.language || navigator.language;
 general_translation(language);
-home_translation(language);
+about_translation(language);
 //#endregion
 
 //#region 4) bonus jobs & ideas for future
