@@ -80,11 +80,11 @@ function home_translation(language) {
         introduction_pageHeadline.innerText = "front-end. web-development";
         introduction_image.title = "Energie tanken und Ideen nachgehen - in der Ruhe liegt die Kraft."
         introduction_image.alt = "Schwarz-Weißes Bild von mir sitzend auf einer Bank im Wald. Energie tanken für neue Projekte.";
-        introduction_headlineOne.innerText = "Mein Name ist Stefan Bartl. Willkommen auf meiner Seite.";
+        introduction_headlineOne.innerText = "Willkommen. Mein Name ist Stefan. Ich erstelle Webanwendungen.";
         introduction_headlineTwo.innerText = "Enthusiasmus pur";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "Mit Liebe zur Wissenschaft, der Technik und dem Frieden !";
-        introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gäbe ich einen Einblick auf abgeschlossene Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnt ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
+        introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
         //#endregion
         //#region section projects deutsch
@@ -118,11 +118,11 @@ function home_translation(language) {
         introduction_pageHeadline.innerText = "front-end. web-development";
         introduction_image.title = "Recharge your batteries and pursue ideas - strength lies in stillness."
         introduction_image.alt = "Black and white picture of me sitting on a bench in the forest. Recharge your batteries for new projects.";
-        introduction_headlineOne.innerText = "My name is Stefan Bartl. Welcome to my site.";
+        introduction_headlineOne.innerText = "Welcome. My name is Stefan. I craft web applications.";
         introduction_headlineTwo.innerText = "Pure enthusiasm";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "With love for science, technology and peace!";
-        introduction_paragraphOne.innerText = "On this portfolio webpage I would give an insight into completed web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
+        introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
         //#endregion
         //#region section projects english
