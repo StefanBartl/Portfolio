@@ -87,14 +87,18 @@ todo    .
   --prime-pinkviolett: hsl(300, 100%, 50%);
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
+  --prime-torquise: rgb(8, 253, 216);
+
   --wkd-grey: rgb(54, 53, 53);
+  --wkd-midgrey: rgb(38, 38, 38);
+  --wkd-darkgrey: rgb(29, 29, 29);
 }
 
 :root.theme_dark{
 
 /*? === colour === */
 
---background-colour: var(--wkd-grey);
+--background-colour: var(--wkd-darkgrey);
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
 --shadows: var(--main-white);
@@ -274,6 +278,7 @@ header {
   width: 100%;
   align-items: center;
   display: flex;
+
 }
 
 ul {
@@ -282,6 +287,11 @@ ul {
   font-size: var(--fs-700);
   font-weight: bold;
   margin-right: 2rem;
+}
+
+/* navbar text */
+li a {
+  color: var(--text-main-colour);
 }
 
 /* my logo on the right side */
@@ -297,6 +307,7 @@ ul :nth-child(5) {
   margin-left: auto;
   font-size: small;
   align-self: center;
+  color: var(--text-main-colour);
 }
 
 ul :nth-child(5):hover::marker {
@@ -366,7 +377,6 @@ li:hover::marker {
   text-align: center;
   padding-top: 8rem;
   margin-bottom: 4rem;
-  
 }
 
 .introduction-content {
