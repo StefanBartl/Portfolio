@@ -20,6 +20,7 @@
 /* #region jobs to-do */
 /*
 !                           to-do 
+todo    Themes einrichten, wechsel ermöglichen.
 todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
 todo    Hover über socialmedia icons und den blog soll etwas besonderes sein.
 todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
@@ -86,13 +87,14 @@ todo    .
   --prime-pinkviolett: hsl(300, 100%, 50%);
   --prime-intense-blue: hsl(240, 100%, 49%);
   --prime-pastell-blue: hsl(201, 79%, 46%);
-
+  --wkd-grey: rgb(54, 53, 53);
 }
 
 :root.theme_dark{
 
 /*? === colour === */
---background-colour: var(--main-black);
+
+--background-colour: var(--wkd-grey);
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
 --shadows: var(--main-white);
@@ -266,8 +268,6 @@ header {
     /* to even out the navlist background: */
   margin-top: -1.1rem;
   box-shadow: inset 0 1.1rem 1rem var(--shadows);
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 10%;
 }
 
 .navlist {
@@ -277,7 +277,7 @@ header {
 }
 
 ul {
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
   font-size: var(--fs-700);
   font-weight: bold;
@@ -357,19 +357,29 @@ li:hover::marker {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 3rem;
   margin-bottom: 3rem;
 }
 
 .headline {
+  width: 60%;
   font-size: 5rem;
   text-align: center;
   padding-top: 8rem;
   margin-bottom: 4rem;
+  
+}
+
+.introduction-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .div-image-introduction {
-width: max(250px, 35vw);
+width: max(300px, 30vw);
 }
 
 .image-introduction {
@@ -414,9 +424,12 @@ margin-block: 2rem;
   gap: 5rem;
 }
 
+.section-projects :last-child {
+  margin-bottom: 5rem;
+}
+
 .headline-section-projects {
   font-size: 4rem;
-  background-color: var(--counter-colour);
 }
 
 .projects {
@@ -616,7 +629,6 @@ transform-origin: left;
   min-width: 100%;
   text-align: center;
   font-size: 3rem;
-  background-color: var(--counter-colour);
 }
 
 .wrapper-socialicons {
