@@ -8,12 +8,12 @@
      navlist_contact = document.querySelector(".navlist-contact");
      navlist_about = document.querySelector(".navlist-about");
      navlist_language = document.querySelector(".navlist-language");
-     navlist_myicon = document.querySelector(".introduction-mylogo");
 //#endregion
 
 // ! home page       
 //#region section introduction
 if(document.querySelector(".section-introduction")){
+     introduction_mylogo = document.querySelector(".introduction-mylogo");
      introduction_pageHeadline = document.querySelector(".headline");
      introduction_image = document.querySelector(".image-introduction");
      introduction_headlineOne = document.querySelector(".introduction-headline-one");
@@ -50,6 +50,7 @@ if(document.querySelector(".section-projects")){
 // ! about page
 //#region section about
 if(document.querySelector(".section-about")){
+     about_mylogo = document.querySelector(".about-mylogo");
      about_headline = document.querySelector(".about-headline");
      about_headline_one = document.querySelector(".about-headline-one");
      about_headline_two = document.querySelector(".about-headline-two");

@@ -36,8 +36,6 @@ function general_translation(language) {
           navlist_language.innerText = "english";
           navlist_language.title = "Switch to English!";
           navlist_language.alt = "Switch to English.";
-          navlist_myicon.title ="Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! Hier gehts zu meinem Github-Repository.";
-          navlist_myicon.alt ="Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
           //console.log(`Navbar translated to Deutsch`);
         };
         //? navbar english
@@ -57,8 +55,6 @@ function general_translation(language) {
           navlist_language.innerText = "deutsch";
           navlist_language.title = "Zu Deutsch wechseln!";
           navlist_language.alt = "Zu Deutsch wechseln.";
-          navlist_myicon.title = "My motto: love science, technology & peace!";
-          navlist_myicon.alt ="Logo with my motto: love science, technology & peace! Click to go to my Github-Repository.";
           //console.log(`Navbar translated to English`);
         };
   };
@@ -72,6 +68,8 @@ function home_translation(language) {
       if (language === "de") {
         //? section introduction deutsch
         introduction_pageHeadline.innerText = "front-end. web-development";
+        introduction_mylogo.title = "Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! Hier gehts zu meinem Github-Repository.";
+        introduction_mylogo.alt = "Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
         introduction_image.title = "Energie tanken und Ideen nachgehen - in der Ruhe liegt die Kraft."
         introduction_image.alt = "Schwarz-Weißes Bild von mir sitzend auf einer Bank im Wald. Energie tanken für neue Projekte.";
         introduction_headlineOne.innerText = "Willkommen. Mein Name ist Stefan.\nIch erstelle Webanwendungen.";
@@ -81,7 +79,7 @@ function home_translation(language) {
         introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
         //? section projects deutsch
-        projects_section_headline.innerText = "Projekte";
+        projects_section_headline.innerText = "projekte";
         project_one_image.title = "Weckt es Erinnerungen an dein Kinderzimmer?";
         project_one_image.alt = "Ein Etch-a-Sketch Spielapparat in rot mit weißen Knöpfen.";
         project_two_image.title = "4-Gewinnt: Die erweiterte Version des 'Doddel-Schach' !";
@@ -107,6 +105,8 @@ function home_translation(language) {
       if (language !== "de") {
         //? section introduction english
         introduction_pageHeadline.innerText = "front-end. web-development";
+        introduction_mylogo.title = "My motto: love science, technology & peace!";
+        introduction_mylogo.alt ="Logo with my motto: love science, technology & peace! Click to go to my Github-Repository.";
         introduction_image.title = "Recharge your batteries and pursue ideas - strength lies in stillness."
         introduction_image.alt = "Black and white picture of me sitting on a bench in the forest. Recharge your batteries for new projects.";
         introduction_headlineOne.innerText = "Welcome. My name is Stefan.\nI craft web applications.";
@@ -116,7 +116,7 @@ function home_translation(language) {
         introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
         //? section projects english
-        projects_section_headline.innerText = "Projects";
+        projects_section_headline.innerText = "projects";
         project_one_image.title = "Does it bring back memories of your childhood room?";
         project_one_image.alt = "An Etch-a-Sketch game machine in red with white buttons.";
         project_two_image.title = "4-in-a-row: The extended version of 'Noob Chess'!";
@@ -149,7 +149,9 @@ function about_translation(language) {
   if(document.querySelector(".section-about")){
     if (language === "de") {
       //? section about deutsch
-      about_headline.innerText = "Über mich und diese Seite";
+      about_mylogo.title ="Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! Hier gehts zu meinem Github-Repository.";
+      about_mylogo.alt ="Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
+      about_headline.innerText = "über mich und diese Seite";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Danke";
       about_headline_three.innerText = "Zu meiner Person";
@@ -172,7 +174,9 @@ function about_translation(language) {
     };
     if (language !== "de") {
       //? section about english
-      about_headline.innerText = "About me and this site";
+      about_mylogo.title = "My motto: love science, technology & peace!";
+      about_mylogo.alt ="Logo with my motto: love science, technology & peace! Click to go to my Github-Repository.";
+      about_headline.innerText = "about me and this site";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Thanks";
       about_headline_three.innerText = "To my person";

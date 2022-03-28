@@ -21,6 +21,7 @@
 /*
 !                           to-do 
 todo    Themes einrichten, wechsel ermöglichen.
+todo    Signatur richtig machen
 todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
 todo    Animation header and hedlines
 todo    Hover über socialmedia icons und den blog soll etwas besonderes sein.
@@ -29,10 +30,7 @@ todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des 
 todo    about page: Mach eine Fotoserie daraus mit hovers, damit sich da was tut. 
 todo    about page Map muss gemacht werden (Farbanpaasung + Marker in Wien [vielleicht mit hover ])
 todo    Bei translate ändert sich die Textlänge stark, dass bitte beim Landkarten re-design berücksichtigen (Größe)!
-todo    Dort wo es eine ID gibt eine Klasse notwendig?
-
-?                               finish
-todo    .                                                                                                                                                                                      
+todo    So wenig IDs wie möglich.                                                                                                                                                                                      
 */
 /* #endregion */
 
@@ -372,13 +370,15 @@ li:hover::marker {
   height: 100vh;
 }
 
+/* #region introduction-headline */
+
 .introduction-headline {
   display: flex;
   width: 100%;
   height: fit-content;
 }
 
-/* my logo */
+/* ? my logo */
 .introduction-mylogo {
   height: max(100px, 10vh);
   aspect-ratio: 1/1;
@@ -404,6 +404,7 @@ li:hover::marker {
 */
 }
 
+/* ? headline */
 .headline {
   font-size: 5rem;
   padding-top: 5rem;
@@ -433,7 +434,9 @@ li:hover::marker {
   height: 100%;
 }
 
+/* #endregion */
 
+/* #region introducttion-content */
 
 .introduction-content {
   width: 100%;
@@ -444,6 +447,8 @@ li:hover::marker {
   gap: 1rem;
 }
 
+/* ? introduction-image */
+
 .div-image-introduction {
 width: max(300px, 30vw);
 }
@@ -452,6 +457,8 @@ width: max(300px, 30vw);
   border-radius: 3rem;
   filter: drop-shadow(-2rem -1rem 3rem white);
 }
+
+/* ? introduction-text */
 
 .div_introduction-description {
   display: flex;
@@ -481,6 +488,7 @@ margin-block: 2rem;
   font-size: var(--fs-600);
   
 }
+/* #endregion */
 
 /*#endregion */
 
@@ -490,13 +498,40 @@ margin-block: 2rem;
   gap: 5rem;
 }
 
-.section-projects :last-child {
-  margin-bottom: 5rem;
+/* whitespace at section-bottom */
+.section-projects :nth-child(5) {
+  margin-bottom: 10rem;
+}
+
+/* ? headline */
+
+.projects-headline {
+  width: 100%;
+  display: flex;
+  margin-block: 2rem;
 }
 
 .headline-section-projects {
   font-size: 4rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  padding-right: .5rem;
+  border-top: solid 4px var(--main-colour-light); 
+  border-right: solid 4px var(--main-colour-light); 
+  color: var(--main-colour-light);
+  position: relative;
 }
+
+.headline-section-projects::after {
+ position: absolute;
+ content: "";
+ border: solid 2px var(--main-colour-light); 
+ bottom: 0;
+ right: 0;
+ width: 50%;
+}
+
+/* ? projects */
 
 .projects {
   flex-wrap: wrap;
@@ -585,17 +620,75 @@ transform-origin: left;
 
 /*#region 6) about-page */
 
-.about-headline {
-  font-size: 4rem;
-  position: absolute;
-  left: 40%;
-  top: 17rem;
+/* #region about-headline */
+
+/* ? about-headline */
+.div-about-headline {
+ display: flex;
+ padding-top: 6rem;
+ margin-right: 2rem;
 }
+
+.about-headline {
+  font-size: 5rem;
+  margin-left: auto;
+  margin-right: .5rem;
+  background-color: var(--main-colour);
+  color: var(--main-colour-light);
+  position: relative;
+}
+
+.about-headline::before {
+  content: "";
+  border: solid 2px var(--main-colour-light);
+  position: absolute;
+  bottom: 0;
+  right: -.5rem;
+  width: 50%;
+}
+
+.about-headline::after {
+  content: "";
+  border: solid 2px var(--main-colour-light);
+  position: absolute;
+  bottom: 0;
+  right: -.5rem;
+  height: 105%;
+}
+
+/* ? about-mylogo */
+.about-mylogo {
+  height: max(100px, 10vh);
+  aspect-ratio: 1/1;
+  margin-left: 2rem;
+  margin-top: .5rem;
+  padding-left: 1rem;
+  padding-right: .5rem;
+  position: relative;
+}
+
+.about-mylogo::after {
+  content: "";
+  border: solid 2px var(--main-colour-light);
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  height: 110%;
+}
+
+.about-mylogo:hover {
+/*
+  filter: brightness(0) saturate(100%) invert(50%) sepia(70%) saturate(4251%) hue-rotate(1deg) brightness(103%) contrast(105%);
+*/
+}
+
+/* #endregion */
+
+/* #region about-content */
 
 .section-about{
   width: 100%;
-  padding-top: 12rem;
-  padding-left:  1rem;
+  padding-left:  2rem;
   padding-right: 3rem;
   display: flex;
 }
@@ -635,7 +728,7 @@ transform-origin: left;
 }
 
 .about-div-map {
-  margin-top: 15rem;
+  margin-top: 10rem;
 }
 
 .div-map {
@@ -678,9 +771,7 @@ transform-origin: left;
   box-shadow: 0 0 .5rem var(--shadows);
 }
 
-.about-images {
-
-}
+/* #endregion */
 
 /*#endregion */
 
