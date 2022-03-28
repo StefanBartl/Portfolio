@@ -79,7 +79,7 @@ function home_translation(language) {
         introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
         //? section projects deutsch
-        projects_section_headline.innerText = "projekte";
+        projects_section_headline.innerText = "projekte.";
         project_one_image.title = "Weckt es Erinnerungen an dein Kinderzimmer?";
         project_one_image.alt = "Ein Etch-a-Sketch Spielapparat in rot mit weißen Knöpfen.";
         project_two_image.title = "4-Gewinnt: Die erweiterte Version des 'Doddel-Schach' !";
@@ -116,7 +116,7 @@ function home_translation(language) {
         introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
         //? section projects english
-        projects_section_headline.innerText = "projects";
+        projects_section_headline.innerText = "projects.";
         project_one_image.title = "Does it bring back memories of your childhood room?";
         project_one_image.alt = "An Etch-a-Sketch game machine in red with white buttons.";
         project_two_image.title = "4-in-a-row: The extended version of 'Noob Chess'!";
@@ -151,7 +151,7 @@ function about_translation(language) {
       //? section about deutsch
       about_mylogo.title ="Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! Hier gehts zu meinem Github-Repository.";
       about_mylogo.alt ="Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
-      about_headline.innerText = "über mich und diese Seite";
+      about_headline.innerText = "über mich. und diese Seite";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Danke";
       about_headline_three.innerText = "Zu meiner Person";
@@ -164,7 +164,7 @@ function about_translation(language) {
       about_image_donaumarina.title = "In der Stadt an der Donau zu leben ist auf viele Arten wunderbar. Die gute Infrastruktur erlaubt mir mich global zu vernetzen und zu arbeiten.";
       about_image_donaumarina.alt = "Ein Foto das Stefan an einer kultigen Location an der Donau zeigt.";
       //? section-contacts deutsch
-      contact_headline.innerText = "Hier kannst du mich kontaktieren";
+      contact_headline.innerText = "kontaktiere mich hier.";
       contact_socialmedia_headline.innerText = "Über die sozialen Medien..."; 
       contact_myblog_headline.innerText = "...schau auf meinen Blog vorbei...";
       contact_myblog_image.title = "Hier gehts zu meinen deutschsprachigen Blog über die Gesellschaft, Politik und Wissenschaft!";
@@ -176,7 +176,7 @@ function about_translation(language) {
       //? section about english
       about_mylogo.title = "My motto: love science, technology & peace!";
       about_mylogo.alt ="Logo with my motto: love science, technology & peace! Click to go to my Github-Repository.";
-      about_headline.innerText = "about me and this site";
+      about_headline.innerText = "about me. and this site";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Thanks";
       about_headline_three.innerText = "To my person";
@@ -189,7 +189,7 @@ function about_translation(language) {
       about_image_donaumarina.title = "Living in the city on the Danube is wonderful in many ways. The good infrastructure allows me to network and work globally.";
       about_image_donaumarina.alt = "A photo that shows Stefan at a cult location on the Danube.";
       //? section-contacts english
-      contact_headline.innerText = "Here you can contact me";
+      contact_headline.innerText = "contact me here.";
       contact_socialmedia_headline.innerText = "via social media..."; 
       contact_myblog_headline.innerText = "...check out my (german) blog...";
       contact_myblog_image.title = "Click here for my german speaking blog about society, politics and science!";
