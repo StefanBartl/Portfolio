@@ -8,7 +8,7 @@
      navlist_contact = document.querySelector(".navlist-contact");
      navlist_about = document.querySelector(".navlist-about");
      navlist_language = document.querySelector(".navlist-language");
-     navlist_myicon = document.querySelector(".navlist-mylogo");
+     navlist_myicon = document.querySelector(".introduction-mylogo");
 //#endregion
 
 // ! home page       

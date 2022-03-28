@@ -2,11 +2,11 @@
 ?   === navbar language toggle button ===
     ============================= */
 document.querySelector(".navlist-language").addEventListener("click", () => {
-// if clicked set localstorage either to "de" or to "en"
+// if  'deutsch' or 'english' in the navbar is clicked, set localstorage either to "de" or to "en"
 document.querySelector(".navlist-language").innerText === "english"
     ? (localStorage.language = "en")
     : (localStorage.language = "de");
-// invoke translation of page
+// than invoke translation of page
 general_translation(localStorage.language);
 home_translation(localStorage.language);
 about_translation(localStorage.language);
@@ -17,9 +17,10 @@ about_translation(localStorage.language);
 ?   === general components library ===
     =========================== */
 function general_translation(language) {
+  //? navbar
   if(document.querySelector(".navlist")){
+        //?  navbar deutsch
         if (language === "de") {
-          //#region  navlist deutsch
           navlist_start.innerText = "start";
           navlist_start.title = "Zurück zum Start!";
           navlist_start.alt = "Zurück zum Start.";
@@ -35,16 +36,12 @@ function general_translation(language) {
           navlist_language.innerText = "english";
           navlist_language.title = "Switch to English!";
           navlist_language.alt = "Switch to English.";
-          navlist_myicon.title =
-            "Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
-          navlist_myicon.alt =
-            "Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
-          //#endregion
-
-          //console.log(`General elements translated to Deutsch`);
+          navlist_myicon.title ="Mein Motto: Liebe die Wissenschaft, Technik & den Frieden! Hier gehts zu meinem Github-Repository.";
+          navlist_myicon.alt ="Logo mit meinen Motto: Liebe die Wissenschaft, Technik & den Frieden! ";
+          //console.log(`Navbar translated to Deutsch`);
         };
+        //? navbar english
         if (language !== "de") {
-        //#region navlist english
           navlist_start.innerText = "home";
           navlist_start.title = "Back to home!";
           navlist_start.alt = "Back to home.";
@@ -61,11 +58,8 @@ function general_translation(language) {
           navlist_language.title = "Zu Deutsch wechseln!";
           navlist_language.alt = "Zu Deutsch wechseln.";
           navlist_myicon.title = "My motto: love science, technology & peace!";
-          navlist_myicon.alt =
-            "Logo with my motto: love science, technology & peace!";
-          //#endregion
-
-          //console.log(`General elements translated to English`);
+          navlist_myicon.alt ="Logo with my motto: love science, technology & peace! Click to go to my Github-Repository.";
+          //console.log(`Navbar translated to English`);
         };
   };
 };
@@ -76,18 +70,17 @@ function general_translation(language) {
 function home_translation(language) {
   if(document.querySelector(".section-introduction")){
       if (language === "de") {
-        //#region section introduction deutsch
+        //? section introduction deutsch
         introduction_pageHeadline.innerText = "front-end. web-development";
         introduction_image.title = "Energie tanken und Ideen nachgehen - in der Ruhe liegt die Kraft."
         introduction_image.alt = "Schwarz-Weißes Bild von mir sitzend auf einer Bank im Wald. Energie tanken für neue Projekte.";
-        introduction_headlineOne.innerText = "Willkommen. Mein Name ist Stefan. Ich erstelle Webanwendungen.";
+        introduction_headlineOne.innerText = "Willkommen. Mein Name ist Stefan.\nIch erstelle Webanwendungen.";
         introduction_headlineTwo.innerText = "Enthusiasmus pur";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "Mit Liebe zur Wissenschaft, der Technik und dem Frieden !";
         introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
-        //#endregion
-        //#region section projects deutsch
+        //? section projects deutsch
         projects_section_headline.innerText = "Projekte";
         project_one_image.title = "Weckt es Erinnerungen an dein Kinderzimmer?";
         project_one_image.alt = "Ein Etch-a-Sketch Spielapparat in rot mit weißen Knöpfen.";
@@ -109,23 +102,20 @@ function home_translation(language) {
         project_two_link.innerText = "Eine Runde 4 - Gewinnt ?";
         project_three_link.innerText = "Drei gewinnt geht immer !";
         project_four_link.innerText = "Schnick, Schnack, Schnuck !";
-        //#endregion
-
         //console.log(`Home translated to Deutsch`);
       };
       if (language !== "de") {
-        //#region section introduction english
+        //? section introduction english
         introduction_pageHeadline.innerText = "front-end. web-development";
         introduction_image.title = "Recharge your batteries and pursue ideas - strength lies in stillness."
         introduction_image.alt = "Black and white picture of me sitting on a bench in the forest. Recharge your batteries for new projects.";
-        introduction_headlineOne.innerText = "Welcome. My name is Stefan. I craft web applications.";
+        introduction_headlineOne.innerText = "Welcome. My name is Stefan.\nI craft web applications.";
         introduction_headlineTwo.innerText = "Pure enthusiasm";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "With love for science, technology and peace!";
         introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
-        //#endregion
-        //#region section projects english
+        //? section projects english
         projects_section_headline.innerText = "Projects";
         project_one_image.title = "Does it bring back memories of your childhood room?";
         project_one_image.alt = "An Etch-a-Sketch game machine in red with white buttons.";
@@ -147,8 +137,6 @@ function home_translation(language) {
         project_two_link.innerText = "Wanna play a round 4-in-a-row ?";
         project_three_link.innerText = "3-in-a-row is always possible!";
         project_four_link.innerText = "Rock Paper Scissors !";
-        //#endregion    
-        
         //console.log(`Home translated to english`);
       };
   };
@@ -160,7 +148,7 @@ function home_translation(language) {
 function about_translation(language) {
   if(document.querySelector(".section-about")){
     if (language === "de") {
-      //#region section about deutsch
+      //? section about deutsch
       about_headline.innerText = "Über mich und diese Seite";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Danke";
@@ -173,20 +161,17 @@ function about_translation(language) {
       about_image_map.alt = "Eine Google-Maps Karte von Europa mit einer Markierung in Wien.";
       about_image_donaumarina.title = "In der Stadt an der Donau zu leben ist auf viele Arten wunderbar. Die gute Infrastruktur erlaubt mir mich global zu vernetzen und zu arbeiten.";
       about_image_donaumarina.alt = "Ein Foto das Stefan an einer kultigen Location an der Donau zeigt.";
-      //#endregion
-      //#region section-contacts deutsch
+      //? section-contacts deutsch
       contact_headline.innerText = "Hier kannst du mich kontaktieren";
       contact_socialmedia_headline.innerText = "Über die sozialen Medien..."; 
       contact_myblog_headline.innerText = "...schau auf meinen Blog vorbei...";
       contact_myblog_image.title = "Hier gehts zu meinen deutschsprachigen Blog über die Gesellschaft, Politik und Wissenschaft!";
       contact_myblog_image.alt = "Eine rote Faust in einem grünen Kreis und zwei Sterne mit der Aufschrift: protestblog.eu - Be Heard!";
-      contact_myemail.innerText = "...oder via E-Mail"; 
-      //#endregion
-      
+      contact_myemail.innerText = "...oder via E-Mail";       
       //console.log(`About translated to Deutsch`);
     };
     if (language !== "de") {
-      //#region section about english
+      //? section about english
       about_headline.innerText = "About me and this site";
       about_headline_one.innerText = "Portfolio";
       about_headline_two.innerText = "Thanks";
@@ -199,16 +184,13 @@ function about_translation(language) {
       about_image_map.alt = "A Google Maps map of Europe with a marker in Vienna.";
       about_image_donaumarina.title = "Living in the city on the Danube is wonderful in many ways. The good infrastructure allows me to network and work globally.";
       about_image_donaumarina.alt = "A photo that shows Stefan at a cult location on the Danube.";
-      //#endregion
-      //#region section-contacts english
+      //? section-contacts english
       contact_headline.innerText = "Here you can contact me";
       contact_socialmedia_headline.innerText = "via social media..."; 
       contact_myblog_headline.innerText = "...check out my (german) blog...";
       contact_myblog_image.title = "Click here for my german speaking blog about society, politics and science!";
       contact_myblog_image.alt = "Red fist with green circle, two stars and the text 'protestblog.eu - be heard!' around it.";
       contact_myemail.innerText = "...or via e-mail"; 
-      //#endregion
-
       //console.log(`About translated to english`);
     };
 };
