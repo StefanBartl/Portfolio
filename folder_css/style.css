@@ -24,8 +24,10 @@ todo    Themes einrichten, wechsel ermöglichen.
 todo    Headlines und regions setzen.
 todo    Signatur richtig machen
 todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
+todo    Header navbar overflow at small screens
 todo    Animation header and hedlines
 todo    Hover über socialmedia icons und den blog soll etwas besonderes sein.
+todo    Media queries für h1!
 todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
 todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
 todo    about page: Mach eine Fotoserie daraus mit hovers, damit sich da was tut. 
@@ -97,12 +99,13 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
 
 :root.theme_dark{
 
-/*? === colour === */
+/*? === design === */
 
 --main-colour: var(--wkd-darkgrey);
---main-colour-light: var(--wkd-grey);
+--main-headlines: var(--wkd-grey);
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
+--design-strokes-colour: var(--main-headlines);
 --shadows: var(--main-white);
 
 /*? === text === */
@@ -113,14 +116,18 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
 }
 
 :root.theme_orange{
-  /* colour */
+
+/*? === design === */
+  
   --main-colour: var(--prime-orange);
   --counter-colour: var(--main-black);
   --accent-colour-one: var(--prime-pink);
+  --design-strokes-colour: var(--main-headlines);
   --shadows: var(--main-white);
   
-  /* text  */
-  --text-main-colour: var(--main-white);
+/*? === text === */
+
+--text-main-colour: var(--main-white);
   --text-optimal-width: clamp(45ch, 50%, 75ch);
   --link-hover-color: var(--main-red);
 
@@ -189,7 +196,7 @@ select {
 
 /* #endregion */
 
-/* #region 2) general */
+/* #region 2) general design */
 
 body {
   background-color: var(--main-colour);
@@ -205,8 +212,9 @@ section {
   padding: 1rem;
 }
 
-h3 {
+h1 {
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 
 .section-introduction h2 {
@@ -248,9 +256,6 @@ ul,
 }
 
 .div-image-introduction , /* introduction elements */
-.section-projects,  /* section projects elements */
-.div_img-projects,
-.div-projects-description ,
 .section-contacts,  /* section-contacts elements */
 .div-socialmedia,
 .div-myblog {
@@ -286,7 +291,7 @@ header {
 }
 .navlist::after {
   content: "";
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
   position: absolute;
   left: 1rem;
   bottom: -1rem;
@@ -369,7 +374,7 @@ li:hover::marker {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3rem;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* #region introduction-headline */
@@ -393,7 +398,7 @@ li:hover::marker {
 
 .introduction-mylogo::after {
   content: "";
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
   position: absolute;
   bottom: -4.2rem;
   left: 0;
@@ -408,27 +413,19 @@ li:hover::marker {
   padding-right: 2rem;
   margin-bottom: 4rem;
   background-color: var(--main-colour);
-  color: var(--main-colour-light);
+  color: var(--main-headlines);
   position: relative;
 }
 
 .headline::before {
   content: "";
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
   position: absolute;
   bottom: 0;
   right: 1rem;
   width: 50%;
 }
 
-.headline::after {
-  content: "";
-  border: solid 2px var(--main-colour-light);
-  position: absolute;
-  bottom: 0;
-  right: 1rem;
-  height: 100%;
-}
 
 /* #endregion */
 
@@ -442,7 +439,6 @@ li:hover::marker {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 
 /* ? introduction-image */
 
@@ -483,29 +479,21 @@ margin-block: 2rem;
   margin-top: 1rem;
   text-align: center;
   font-size: var(--fs-600);
-  
 }
+
 /* #endregion */
 
 /*#endregion */
 
 /*#region 5) section: projects  */
 
-.section-projects {
-  gap: 5rem;
-}
+/* #region projects-headline */
 
-/* whitespace at section-bottom */
-.section-projects :nth-child(5) {
-  margin-bottom: 10rem;
-}
-
-/* ? headline */
-
-.projects-headline {
+.div-headline-section-projects {
   width: 100%;
   display: flex;
-  margin-block: 2rem;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 
 .headline-section-projects {
@@ -513,56 +501,92 @@ margin-block: 2rem;
   margin-left: auto;
   margin-right: 1rem;
   padding-right: 1rem;
-  border-top: solid 4px var(--main-colour-light); 
-  color: var(--main-colour-light);
+  border-top: solid 4px var(--design-strokes-colour);
+  color: var(--main-headlines);
   position: relative;
 }
 
 .headline-section-projects::before {
   position: absolute;
   content: "";
-  border: solid 2px var(--main-colour-light); 
+  border: solid 2px var(--design-strokes-colour);
   bottom: 0;
   right: 0;
-  height: 100vh;
+  height: 150vh;
  }
  
 .headline-section-projects::after {
  position: absolute;
  content: "";
- border: solid 2px var(--main-colour-light); 
+ border: solid 2px var(--design-strokes-colour);
  bottom: 0;
  right: 0;
  width: 50%;
 }
 
-/* ? projects */
+/* #endregion */
+
+/* #region projects */
 
 .projects {
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
   filter: blur(1rem);
   transition: all 500ms;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6rem;
+}
+
+.project-one,
+.project-two,
+.project-three,
+.project-four {
+  margin-bottom: 10rem;
 }
 
 .projects:hover {
   filter: blur(0);
 }
 
-.image-projects {
-  width: 300px;
-  aspect-ratio: 1/1;
-  filter: drop-shadow(0rem -1rem 3rem white);
+/* ? projects-div's */
+
+.div-projects-image {
+  display: flex;
+  width: max(200px, 20%);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .div-projects-description {
-  width: 75ch;
+  display: flex;
+  width: clamp(35ch, 30%, 75ch);
+  flex-direction: column;
   font-size: var(--fs-600);
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.projects a {
+  width: fit-content;
+  align-self: center;
+  font-size: var(--fs-600);
+  font-weight: bold;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* ? projects-content */
+
+.image-projects {
+  margin: auto;
+  aspect-ratio: 1/1;
+
+ filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 .projects h3 {
@@ -571,21 +595,10 @@ margin-block: 2rem;
 }
 
 .projects p {
-  text-align: start;
-  width: var(--text-optimal-width);
   padding-left: 3rem;
 }
 
-.projects a {
-  align-self: center;
-  font-size: var(--fs-600);
-  font-weight: bold;
-  position: relative;
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
-/* projects link general dynamic hover styling */
+/* ? projects link general dynamic hover styling */
 
 .projects a::after {
 content: "";
@@ -622,68 +635,54 @@ transform-origin: left;
   border: solid 1px white;
 }
 
+/* #endregion */
+
 /*#endregion */
 
-/*#region 6) about-page */
+/*#region 6) about */
 
-/* #region about-headline */
+/* #region about.html-headline */
 
 /* ? about-headline */
 .div-about-headline {
- display: flex;
- padding-top: 6rem;
- margin-right: 2rem;
-}
+  display: flex;
+  padding-top: 6rem;
+  margin-right: 2rem;
+ }
+ 
+ .about-headline {
+   font-size: 5rem;
+   margin-left: auto;
+   margin-right: .5rem;
+   padding-right: .5rem;
+   background-color: var(--main-colour);
+   color: var(--main-headlines);
+   position: relative;
+ }
+ 
+ .about-headline::before {
+   content: "";
+   border: solid 2px var(--main-headlines);
+   position: absolute;
+   bottom: 0;
+   right: -.5rem;
+   width: 50%;
+ }
+ 
+ /* ? about-mylogo */
+ .about-mylogo {
+   height: max(100px, 10vh);
+   aspect-ratio: 1/1;
+   margin-left: 2rem;
+   margin-top: .5rem;
+   padding-left: 1rem;
+   padding-right: .5rem;
+   position: relative;
+ }
+ 
+ /* #endregion */
 
-.about-headline {
-  font-size: 5rem;
-  margin-left: auto;
-  margin-right: .5rem;
-  padding-right: .5rem;
-  background-color: var(--main-colour);
-  color: var(--main-colour-light);
-  position: relative;
-}
-
-.about-headline::before {
-  content: "";
-  border: solid 2px var(--main-colour-light);
-  position: absolute;
-  bottom: 0;
-  right: -.5rem;
-  width: 50%;
-}
-
-.about-headline::after {
-  content: "";
-  border: solid 2px var(--main-colour-light);
-  position: absolute;
-  bottom: 0;
-  right: -.5rem;
-  height: 105%;
-}
-
-/* ? about-mylogo */
-.about-mylogo {
-  height: max(100px, 10vh);
-  aspect-ratio: 1/1;
-  margin-left: 2rem;
-  margin-top: .5rem;
-  padding-left: 1rem;
-  padding-right: .5rem;
-  position: relative;
-}
-
-.about-mylogo::after {
-  content: "";
-  border: solid 2px var(--main-colour-light);
-  position: absolute;
-  top: -1rem;
-  left: 0;
-  height: 100%;
-}
-
-/* #endregion */
+/* #region section-about */ 
 
 .section-about{
   width: 100%;
@@ -692,8 +691,6 @@ transform-origin: left;
   padding-right: 3rem;
   display: flex;
 }
-
-/* #region about-description */ 
 
 .about-div-description {
   width: var(--text-optimal-width);
@@ -709,7 +706,7 @@ transform-origin: left;
   position: relative;
 }
 
-/* ? strokes left-side 2 */
+/* ? strokes left-side  */
 
 .about-headline-one::before { 
   position: absolute;
@@ -717,7 +714,7 @@ transform-origin: left;
   left: -1rem;
   bottom: 0;
   height: 100vh;
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
 }
 
 .about-headline-two::before { 
@@ -726,7 +723,7 @@ transform-origin: left;
   left: -1rem;
   bottom: 0;
   height: 100vh;
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
 }
 
 .about-headline-three::before { 
@@ -735,10 +732,10 @@ transform-origin: left;
   left: -1rem;
   bottom: 0;
   height: 100vh;
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
 }
 
-/* ? strokes underline */
+/* ? strokes to underline h2 */
 
 .about-div-description  h2::after {
   position: absolute;
@@ -746,7 +743,7 @@ transform-origin: left;
   left: -1rem;
   bottom: 0;
   width: calc(100% + 1rem);
-  border: solid 1px var(--main-colour-light);
+  border: solid 1px var(--design-strokes-colour);
 }
 
 .about-div-description :nth-child(3),
@@ -836,14 +833,14 @@ transform-origin: left;
 .headline-contact {
   align-self: flex-end;
   font-size: 3rem;
-  color: var(--main-colour-light);
+  color: var(--main-headlines);
   position: relative;
 }
 
 .headline-contact::before {
   position: absolute;
   content: "";
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
   bottom: 0;
   left: 50%;
   width: calc(50% + 1rem);
@@ -852,7 +849,7 @@ transform-origin: left;
 .headline-contact::after {
   position: absolute;
   content: "";
-  border: solid 2px var(--main-colour-light);
+  border: solid 2px var(--design-strokes-colour);
   bottom: 0;
   right: -1rem;
   height: 200vh;
@@ -869,7 +866,7 @@ transform-origin: left;
   height: 2rem;
 }
 
-/* invert the all black github logo to white*/
+/* ? invert the all black github logo to white*/
 .div-socialmedia :nth-child(6) {
   filter: invert(1);
 }
@@ -877,6 +874,85 @@ transform-origin: left;
 /* #endregion */
 
 /*#endregion */
+
+/* #region animations */
+
+/* ? design-strokes */
+
+@keyframes design-strokes-animation {
+  from {
+    border-color: var(--design-strokes-colour);
+  }
+  33% {
+    border-color: var(--prime-torquise);
+  }
+  66% {
+    border-color: var(--prime-pinkviolett);
+  }
+  to {
+    border-color: var(--design-strokes-colour);
+  }
+}
+
+.navlist::after,
+/* index.html */
+.introduction-mylogo::after,
+.headline::before,
+.headline-section-projects,
+.headline-section-projects::before,
+.headline-section-projects::after,
+/* about.html */
+.about-headline::before,
+.about-headline-one::before,
+.about-headline-two::before,
+.about-headline-three::before,
+.about-div-description  h2::after,
+.headline-contact::before,
+.headline-contact::after {
+  animation: design-strokes-animation 20s infinite alternate;
+}
+
+/* ? headlines */
+
+@keyframes headline-animation {
+  from {
+    color: var(--main-headlines);
+  }
+  33% {
+
+  }
+66% {
+
+}
+to {
+  color: var(--main-headlines);
+}
+
+
+}
+
+h1 {
+  animation: headline-animation 20s infinite alternate;
+}
+
+
+
+
+/* #endregion */
+
+/* #region media queries */
+/* ? small devices */
+@media (max-width: 767.98px) {
+
+  /* ? shrink headlines*/
+  .headline,
+  .about-headline {
+    font-size: var(--fs-700);
+  }
+
+}
+
+/* #endregion */
 
 /* #region bonus jobs and ideas for future */
 /*
