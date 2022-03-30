@@ -1,4 +1,4 @@
-/* #region table of content */
+/* #region Table of Content */
 /*    
 !                  Project Portfolio  Main-CSS-Stylesheet
 ?                                    powered by
@@ -22,7 +22,9 @@
 !                           to-do 
 todo    Themes einrichten, wechsel ermöglichen.
 todo    Headlines und regions setzen.
+todo    a links at projects specialicising
 todo    Signatur richtig machen
+todo    Porjekte Headline with small display - decision
 todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
 todo    Header navbar overflow at small screens
 todo    Animation header and hedlines
@@ -38,7 +40,7 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
 */      
 /* #endregion */
 
-/*#region 1) css setup */
+/*#region CSS-Setup */
 
 /*? ===  font(s) === */
 
@@ -106,6 +108,7 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
 --counter-colour: var(--main-black);
 --accent-colour-one: var(--prime-orange);
 --design-strokes-colour: var(--main-headlines);
+--design-strokes-accent-colour: var(--prime-pinkviolett);
 --shadows: var(--main-white);
 
 /*? === text === */
@@ -196,36 +199,33 @@ select {
 
 /* #endregion */
 
-/* #region 2) general design */
+/* #region General-Design */
 
 body {
   background-color: var(--main-colour);
   color: var(--text-main-colour);
   font-family: var(--text-main-font-family);
-  box-shadow: inset 0 0 1rem var(--shadows);
 }
 
 /* theme implementation */
 header,
-section-contacts,
+.section-contacts,
 section {
   padding: 1rem;
 }
 
-h1 {
-  text-transform: uppercase;
+h1, h2 {
+  color: var(--accent-colour-one);
   overflow-wrap: break-word;
 }
 
-.section-introduction h2 {
-  color: var(--accent-colour-one);
+h3 {
+  text-transform: uppercase;
 }
 
-.headline-section-projects,
-.headline-contact {
-  color: var(--accent-colour-one);
+.introduction-headline-outro {
+  color: var(--prime-lightgrey);
 }
-
 
 /* links */
 a {
@@ -268,18 +268,17 @@ ul,
 
 /* #endregion */
 
-/* #region 3) header & navlist */
+/* #region header */
 
 header {
   width: 100%;
   height: 7rem;
   position: fixed;
   top: 0;
-  z-index: 2;
+  z-index: 10;
   background-color: var(--main-colour);
     /* to even out the navlist background: */
   margin-top: -1.1rem;
-  box-shadow: inset 0 1.1rem 1rem var(--shadows);
 }
 
 .navlist {
@@ -296,6 +295,7 @@ header {
   left: 1rem;
   bottom: -1rem;
   width: calc(100% - 2rem);
+  transition: all 2s ease;
 }
 
 ul {
@@ -367,7 +367,9 @@ li:hover::marker {
 
 /*#endregion */
 
-/*#region 4) section: section-introduction */
+/* #region index.html */
+
+/* #region home: section: section-introduction */
 
 .section-introduction {
   display: flex;
@@ -378,12 +380,6 @@ li:hover::marker {
 }
 
 /* #region introduction-headline */
-
-.introduction-headline {
-  display: flex;
-  width: 100%;
-  height: fit-content;
-}
 
 /* ? introduction- mylogo */
 .introduction-mylogo {
@@ -396,40 +392,28 @@ li:hover::marker {
   position: relative;
 }
 
-.introduction-mylogo::after {
-  content: "";
-  border: solid 2px var(--design-strokes-colour);
-  position: absolute;
-  bottom: -4.2rem;
-  left: 0;
-  height: 90%;
+/* ? headline */
+
+.introduction-headline {
+  display: flex;
+  width: 100%;
+  height: fit-content;
 }
 
-/* ? headline */
 .headline {
   font-size: 5rem;
   padding-top: 5rem;
   margin-left: auto;
   padding-right: 2rem;
   margin-bottom: 4rem;
-  background-color: var(--main-colour);
-  color: var(--main-headlines);
   position: relative;
+  background-color: var(--main-colour);
+  z-index: 3;
 }
-
-.headline::before {
-  content: "";
-  border: solid 2px var(--design-strokes-colour);
-  position: absolute;
-  bottom: 0;
-  right: 1rem;
-  width: 50%;
-}
-
 
 /* #endregion */
 
-/* #region introducttion-content */
+/* #region introduction-content */
 
 .introduction-content {
   width: 100%;
@@ -448,12 +432,12 @@ width: max(300px, 30vw);
 
 .image-introduction {
   border-radius: 3rem;
-  filter: drop-shadow(-2rem -1rem 3rem white);
+  filter: drop-shadow( -1rem 1rem 2rem white);
 }
 
 /* ? introduction-text */
 
-.div_introduction-description {
+.div-introduction-description {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -462,19 +446,20 @@ width: max(300px, 30vw);
   font-size: var(--fs-500);
   padding-left: 1rem;
   padding-right: 1rem;
+  position: relative;
 }
 
 .introduction-headline-one {
+position: relative;
 margin-block: 2rem;
 }
 
-.div_introduction-description p {
+.div-introduction-description p {
   align-items: center;
   padding-left: 3rem;
 }
 
 .introduction-headline-outro {
-  color: var(--accent-colour-one);
   padding-left: 3rem;
   margin-top: 1rem;
   text-align: center;
@@ -485,7 +470,7 @@ margin-block: 2rem;
 
 /*#endregion */
 
-/*#region 5) section: projects  */
+/* #region home: section: projects  */
 
 /* #region projects-headline */
 
@@ -494,6 +479,9 @@ margin-block: 2rem;
   display: flex;
   margin-top: 5vh;
   margin-bottom: 10vh;
+  position: sticky;
+  top: 6rem;
+  z-index: 2;
 }
 
 .headline-section-projects {
@@ -501,27 +489,7 @@ margin-block: 2rem;
   margin-left: auto;
   margin-right: 1rem;
   padding-right: 1rem;
-  border-top: solid 4px var(--design-strokes-colour);
-  color: var(--main-headlines);
   position: relative;
-}
-
-.headline-section-projects::before {
-  position: absolute;
-  content: "";
-  border: solid 2px var(--design-strokes-colour);
-  bottom: 0;
-  right: 0;
-  height: 150vh;
- }
- 
-.headline-section-projects::after {
- position: absolute;
- content: "";
- border: solid 2px var(--design-strokes-colour);
- bottom: 0;
- right: 0;
- width: 50%;
 }
 
 /* #endregion */
@@ -639,9 +607,11 @@ transform-origin: left;
 
 /*#endregion */
 
-/*#region 6) about */
+/* #endregion */ 
 
-/* #region about.html-headline */
+/* #region about.html */
+
+/* #region about: headline */
 
 /* ? about-headline */
 .div-about-headline {
@@ -656,7 +626,6 @@ transform-origin: left;
    margin-right: .5rem;
    padding-right: .5rem;
    background-color: var(--main-colour);
-   color: var(--main-headlines);
    position: relative;
  }
  
@@ -682,7 +651,7 @@ transform-origin: left;
  
  /* #endregion */
 
-/* #region section-about */ 
+/* #region about: section-about */ 
 
 .section-about{
   width: 100%;
@@ -700,8 +669,6 @@ transform-origin: left;
 }
 
 .about-div-description  h2 {
-  color: var(--accent-colour-one);
-  text-transform: uppercase;
   width: max-content;
   position: relative;
 }
@@ -772,7 +739,7 @@ transform-origin: left;
 
 /* #endregion */
 
-/* #region about-map */
+/* #region about: map */
 
 .about-div-map {
   margin-top: 4rem;
@@ -820,7 +787,7 @@ transform-origin: left;
 
 /* #endregion */
 
-/*#region section contact */
+/* #region about: section contact */
 
 .section-contacts {
   display: flex;
@@ -833,7 +800,6 @@ transform-origin: left;
 .headline-contact {
   align-self: flex-end;
   font-size: 3rem;
-  color: var(--main-headlines);
   position: relative;
 }
 
@@ -873,74 +839,248 @@ transform-origin: left;
 
 /* #endregion */
 
-/*#endregion */
+/* #endregion */ 
 
-/* #region animations */
+/* #region Pseudoelements */
 
-/* ? design-strokes */
+/* #region index.html */
 
-@keyframes design-strokes-animation {
-  from {
-    border-color: var(--design-strokes-colour);
-  }
-  33% {
-    border-color: var(--prime-torquise);
-  }
-  66% {
-    border-color: var(--prime-pinkviolett);
-  }
-  to {
-    border-color: var(--design-strokes-colour);
-  }
+/* #region section intro */
+
+/* ? headline */ 
+
+.introduction-mylogo::after {
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  position: absolute;
+  left: 0;
+  bottom: -4.2rem;
+  height: 100%;
+  transition: all 1.5s ease;
 }
 
-.navlist::after,
-/* index.html */
-.introduction-mylogo::after,
-.headline::before,
-.headline-section-projects,
-.headline-section-projects::before,
-.headline-section-projects::after,
-/* about.html */
-.about-headline::before,
-.about-headline-one::before,
-.about-headline-two::before,
-.about-headline-three::before,
-.about-div-description  h2::after,
-.headline-contact::before,
-.headline-contact::after {
-  animation: design-strokes-animation 20s infinite alternate;
+.introduction-mylogo::before{
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  bottom: -4.2rem;
+  left: 0;
+  width: 20%;
+  transition: all 1s ease;
 }
 
-/* ? headlines */
-
-@keyframes headline-animation {
-  from {
-    color: var(--main-headlines);
-  }
-  33% {
-
-  }
-66% {
-
-}
-to {
-  color: var(--main-headlines);
+.headline::before {
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  width: 50%;
+  transition: all 2s ease;
 }
 
-
+.headline::after {
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  position: absolute;
+  bottom: 0;
+  right: 1rem;
+  height: 100%;
+  transition: all 2s ease;
 }
 
-h1 {
-  animation: headline-animation 20s infinite alternate;
+/* ? page introduction-content */
+
+.div-introduction-description::before {
+  position: absolute;
+  content: "";
+  border: solid 1px var(--design-strokes-colour);
+  bottom: -.2rem;
+  right: 0;
+  height: 2rem;
+  transition: all 1s ease;
 }
 
+.div-introduction-description::after {
+  position: absolute;
+  content: "";
+  border: solid 1px var(--design-strokes-colour);
+  bottom: 0;
+  right: -.3rem;
+  width: 2rem;
+  transition: all 1s ease;
+}
 
+/* ? intruduction-text */ 
 
+.introduction-headline-one::before {
+  position: absolute;
+  content: "";
+  border: solid 1px var(--design-strokes-colour);
+  top: -.5rem;
+  left: -1.5rem;
+  width: 2rem;
+  transition: all 1s ease;
+}
+
+.introduction-headline-one::after {
+  position: absolute;
+  content: "";
+  border: solid 1px var(--design-strokes-colour);
+  top: -1rem;
+  left: -1rem;
+  height: 2rem;
+  transition: all 1s ease;
+}
+
+/* #endregion*/
+
+/* #region section projects */
+
+.div-headline-section-projects::before {
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  top: 0;
+  right: 1rem;
+  width: 20%;
+  transition: all 2s ease;
+ }
+
+.headline-section-projects::before {
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  bottom: 0;
+  right: 0;
+  height: 150vh;
+  transition: all 2s ease;
+ }
+ 
+.headline-section-projects::after {
+ position: absolute;
+ content: "";
+ border: solid 2px var(--design-strokes-colour);
+ bottom: 0;
+ right: 0;
+ width: 50%;
+ transition: all 2s ease;
+}
+
+/* #endregion */ 
 
 /* #endregion */
 
-/* #region media queries */
+/* #region about.html */
+
+/* #endregion */
+
+/* #endregion */
+
+/* #region Transitions */
+
+/* #region header */
+
+/* ? navlist transition */
+
+header:hover .navlist::after{
+  left: 10%;
+  width: 80%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+/* #endregion */ 
+
+/* #region index.html */
+
+/* #region introduction */
+
+/* ? mylogo transition */
+
+.introduction-mylogo:hover::after{
+  height: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+.introduction-mylogo:hover::before{
+  width: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+/* ? headline transition */
+
+.headline:hover::before {
+  width: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+.headline:hover::after {
+  height: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+/* ? introduction-content transitions */
+
+.introduction-content:hover .div-introduction-description::before {
+  border-color: var(--design-strokes-accent-colour);
+  bottom: 0;
+  right: 0;
+  height: 2rem;
+}
+
+.introduction-content:hover .div-introduction-description::after {
+  border-color: var(--design-strokes-accent-colour);
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+}
+
+.introduction-content:hover  .introduction-headline-one::before {
+  border-color: var(--design-strokes-accent-colour);
+  top: -.5rem;
+  left: -1rem;
+  width: 2rem;
+}
+
+.introduction-content:hover .introduction-headline-one::after {
+  border-color: var(--design-strokes-accent-colour);
+  top: -.5rem;
+  left: -1rem;
+  height: 2rem;
+}
+
+/* #endregion */ 
+
+/* #region projects */
+
+.section-projects:hover .div-headline-section-projects:before {
+  border-color: var(--design-strokes-accent-colour);
+  top: 0;
+  right: 1rem;
+  width: 3rem;
+ }
+
+ .section-projects:hover .headline-section-projects::before {
+  border-color: var(--design-strokes-accent-colour);
+  bottom: 0;
+  right: 0;
+  height: 100%;
+ }
+
+ .section-projects:hover .headline-section-projects::after {
+   border-color: var(--design-strokes-accent-colour);
+  bottom: 0;
+  right: 0;
+  width: 25%;
+ }
+
+/* #endregion */ 
+
+/* #endregion */
+
+/* #endregion */ 
+
+/* #region Media Queries */
 /* ? small devices */
 @media (max-width: 767.98px) {
 
@@ -952,10 +1092,4 @@ h1 {
 
 }
 
-/* #endregion */
-
-/* #region bonus jobs and ideas for future */
-/*
-todo  neues CSS-Default-Layout als Template abspeichern!
-*/
 /* #endregion */
