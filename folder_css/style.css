@@ -480,7 +480,7 @@ margin-block: 2rem;
   margin-top: 5vh;
   margin-bottom: 10vh;
   position: sticky;
-  top: 6rem;
+  top: 5.6rem;
   z-index: 2;
 }
 
@@ -1062,9 +1062,6 @@ header:hover .navlist::after{
 
  .section-projects:hover .headline-section-projects::before {
   border-color: var(--design-strokes-accent-colour);
-  bottom: 0;
-  right: 0;
-  height: 100%;
  }
 
  .section-projects:hover .headline-section-projects::after {
