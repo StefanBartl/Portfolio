@@ -629,15 +629,7 @@ transform-origin: left;
    margin-right: .5rem;
    background-color: var(--main-colour);
    position: relative;
- }
- 
- .about-headline::before {
-   content: "";
-   border: solid 2px var(--main-headlines);
-   position: absolute;
-   bottom: 0;
-   right: -.5rem;
-   width: 50%;
+   z-index: 3;
  }
  
  /* ? about-mylogo */
@@ -645,10 +637,13 @@ transform-origin: left;
    height: max(100px, 10vh);
    aspect-ratio: 1/1;
    margin-left: 2rem;
-   margin-top: .5rem;
+   margin-top: -.5rem;
+   padding-top: 1rem;
    padding-left: 1rem;
-   padding-right: .5rem;
+   padding-right: 1rem;
    position: relative;
+   background-color: var(--main-colour);
+   z-index: 3;
  }
  
  /* #endregion */
@@ -673,46 +668,6 @@ transform-origin: left;
 .about-div-description  h2 {
   width: max-content;
   position: relative;
-}
-
-/* ? strokes left-side  */
-
-.about-headline-one::before { 
-  position: absolute;
-  content: "";
-  left: -1rem;
-  bottom: 0;
-  height: 100vh;
-  border: solid 2px var(--design-strokes-colour);
-}
-
-.about-headline-two::before { 
-  position: absolute;
-  content: "";
-  left: -1rem;
-  bottom: 0;
-  height: 100vh;
-  border: solid 2px var(--design-strokes-colour);
-}
-
-.about-headline-three::before { 
-  position: absolute;
-  content: "";
-  left: -1rem;
-  bottom: 0;
-  height: 100vh;
-  border: solid 2px var(--design-strokes-colour);
-}
-
-/* ? strokes to underline h2 */
-
-.about-div-description  h2::after {
-  position: absolute;
-  content: "";
-  left: -1rem;
-  bottom: 0;
-  width: calc(100% + 1rem);
-  border: solid 1px var(--design-strokes-colour);
 }
 
 .about-div-description :nth-child(3),
@@ -751,24 +706,6 @@ transform-origin: left;
   position: relative;
 }
 
-.div-map::after {
-  content: "";
-  position: absolute;
-  top: 43%;
-  right: 38%;
-  width: 2rem;
-  height: 2rem;
-  border: solid 3px var(--accent-colour-one);
-  border-style: dashed;
-  border-radius: 50%;
-  transition: all 500ms;
-}
-
-.div-map:hover::after {
-  border-color: var(--prime-pinkviolett);
-  transform: scale(2);
-}
-
 .about-image-map {
   filter: grayscale(.8);
 }
@@ -803,24 +740,6 @@ transform-origin: left;
   align-self: flex-end;
   font-size: 3rem;
   position: relative;
-}
-
-.headline-contact::before {
-  position: absolute;
-  content: "";
-  border: solid 2px var(--design-strokes-colour);
-  bottom: 0;
-  left: 50%;
-  width: calc(50% + 1rem);
-}
-
-.headline-contact::after {
-  position: absolute;
-  content: "";
-  border: solid 2px var(--design-strokes-colour);
-  bottom: 0;
-  right: -1rem;
-  height: 200vh;
 }
 
 .wrapper-socialicons {
@@ -887,7 +806,7 @@ transform-origin: left;
   position: absolute;
   bottom: 0;
   right: -.5rem;
-  height: 100%;
+  height: 0%;
   transition: all 2s ease;
 }
 
@@ -975,6 +894,133 @@ transform-origin: left;
 
 /* #region about.html */
 
+/* ? mylogo */
+
+.about-mylogo::before{
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  bottom: 0;
+  left: 0;
+  width: 20%;
+  transition: all 1s ease;
+}
+
+.about-mylogo::after {
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  transition: all 1.5s ease;
+}
+
+/* ? about headline */
+
+.about-headline::before {
+  content: "";
+  border: solid 2px var(--main-headlines);
+  position: absolute;
+  bottom: 0;
+  right: -.5rem;
+  width: 50%;
+  transition: all 2s ease;
+}
+
+.about-headline::after {
+  content: "";
+  border: solid 2px var(--main-headlines);
+  position: absolute;
+  bottom: 0;
+  right: -.5rem;
+  height: 0%;
+  transition: all 2s ease;
+}
+
+/* ? text headlines */
+
+.about-headline-two::before { 
+  position: absolute;
+  content: "";
+  left: -1rem;
+  bottom: 0;
+  height: 100vh;
+  border: solid 2px var(--design-strokes-colour);
+  transition: all 2s ease;
+}
+
+.about-headline-three::before { 
+  position: absolute;
+  content: "";
+  left: -1rem;
+  bottom: 0;
+  height: 100vh;
+  border: solid 2px var(--design-strokes-colour);
+  transition: all 2s ease;
+}
+
+/* ? strokes left-side  */
+
+.about-headline-one::before { 
+  position: absolute;
+  content: "";
+  left: -1rem;
+  bottom: 0;
+  height: 100vh;
+  border: solid 2px var(--design-strokes-colour);
+  transition: all 2s ease;
+}
+
+/* ? strokes to underline h2 */
+
+.about-div-description  h2::after {
+  position: absolute;
+  content: "";
+  left: -1rem;
+  bottom: 0;
+  width: calc(100% + 1rem);
+  border: solid 1px var(--design-strokes-colour);
+  transition: all 2s ease;
+}
+
+/* ? map circles */
+
+.div-map::after {
+  content: "";
+  position: absolute;
+  top: 43%;
+  right: 38%;
+  width: 2rem;
+  height: 2rem;
+  border: solid 3px var(--accent-colour-one);
+  border-style: dashed;
+  border-radius: 50%;
+  transition: all 500ms;
+}
+
+/* ? contact headline */
+
+.headline-contact::before {
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  bottom: 0;
+  right: -1rem;
+  width: 50%;
+  transition: all 2s ease;
+}
+
+.headline-contact::after {
+  position: absolute;
+  content: "";
+  border: solid 2px var(--design-strokes-colour);
+  bottom: 0;
+  right: -1rem;
+  height: 200vh;
+  transition: all 1.5s ease;
+}
+
 /* #endregion */
 
 /* #endregion */
@@ -1017,7 +1063,7 @@ header:hover .navlist::after{
 }
 
 .headline:hover::after {
-  height: 30%;
+  height: 100%;
   border-color: var(--design-strokes-accent-colour);
 }
 
@@ -1077,7 +1123,70 @@ header:hover .navlist::after{
 
 /* #endregion */
 
+/* #region about.html */
+
+/* ? my logo  */
+
+.about-mylogo:hover::before {
+  width: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+.about-mylogo:hover::after {
+  height: 30%;
+  border-color: var(--design-strokes-accent-colour);
+}
+
+/* ? page headline */
+
+.about-headline:hover::before { 
+  border-color: var(--design-strokes-accent-colour);
+  width: 30%;
+}
+
+.about-headline:hover::after { 
+  border-color: var(--design-strokes-accent-colour);
+  height: 100%;
+  }
+
+  /* ? left side to top stroke */
+.about-div-description:hover  .about-headline-three::before {
+  border-color: var(--design-strokes-accent-colour);
+}
+
+/* ? underline h2 left */
+.about-div-description:hover  h2::after  {
+border-color: var(--design-strokes-accent-colour);
+width: 2rem;
+}
+
+/* ? map  */
+.div-map:hover {
+  border: solid 2px var(--design-strokes-accent-colour);
+  z-index: 3;
+}
+
+/* ? map circles */
+.div-map:hover::after {
+  border-color: var(--prime-pinkviolett);
+  transform: scale(2);
+}
+
+/* ? contact headline */
+
+.section-contacts:hover .headline-contact::before {
+  border-color: var(--design-strokes-accent-colour);
+  width: 3rem;
+}
+
+.section-contacts:hover .headline-contact::after {
+  border-color: var(--design-strokes-accent-colour);
+  height: 3rem;
+}
+
 /* #endregion */ 
+
+/* #endregion */
 
 /* #region Media Queries */
 /* ? small devices */
