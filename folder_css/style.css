@@ -20,22 +20,19 @@
 /* #region jobs to-do */
 /*
 !                           to-do 
-todo    Themes einrichten, wechsel ermöglichen.
-todo    Headlines und regions setzen.
-todo    a links at projects specialicising
 todo    Signatur richtig machen
 todo    Porjekte Headline with small display - decision
 todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
 todo    Header navbar overflow at small screens
 todo    Animation header and hedlines
-todo    Hover über socialmedia icons und den blog soll etwas besonderes sein.
 todo    Media queries für h1!
 todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
 todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
 todo    about page: Mach eine Fotoserie daraus mit hovers, damit sich da was tut. 
 todo    about page Map muss gemacht werden (Farbanpaasung + Marker in Wien [vielleicht mit hover ])
 todo    Bei translate ändert sich die Textlänge stark, dass bitte beim Landkarten re-design berücksichtigen (Größe)!
-todo    So wenig IDs wie möglich.       
+todo    Themes einrichten, wechsel ermöglichen.
+todo    Finish sheet: Regions, Topics
 todo    Finish Table of content. All commented out? Summed all possible rules?                                                                                                                                                                                
 */      
 /* #endregion */
@@ -215,13 +212,17 @@ section {
 }
 
 h1, h2 {
-  color: var(--accent-colour-one);
   overflow-wrap: break-word;
 }
 
 h1 {
+  color: var(--accent-colour-one);
   padding-right: 1rem;
   font-size: 4.5vw;
+}
+
+h2 {
+  color: var(--accent-colour-one);
 }
 
 h3 {
@@ -234,21 +235,7 @@ h3 {
 
 /* links */
 a {
-  color: var(--accent-colour-one);
   text-decoration: none;
-}
-
-a:hover {
-  color: var(--link-hover-color);
-}
-
-/* negate link styling in navbar */
-li a {
-  color: white;
-}
-
-li a:hover {
-  color: white;
 }
 
 /* summarized properties */
@@ -276,37 +263,38 @@ ul,
 /* #region header */
 
 header {
+  display: flex;
   width: 100%;
-  height: 7rem;
+  line-height: 1;
   position: fixed;
   top: 0;
   z-index: 10;
   background-color: var(--main-colour);
     /* to even out the navlist background: */
-  margin-top: -1.1rem;
 }
 
 .navlist {
-  width: 100%;
-  padding-top: 1.1rem;
-  align-items: center;
   display: flex;
+  width: 100%;
+  margin-right: 2rem;
+  align-items: center;
   position: relative;
 }
+
 .navlist::after {
   content: "";
   border: solid 2px var(--design-strokes-colour);
   position: absolute;
   left: 1rem;
   bottom: -1rem;
-  width: calc(100% - 2rem);
+  width: 100%;
   transition: all 2s ease;
 }
 
 ul {
   gap: 3rem;
   width: 100%;
-  font-size: var(--fs-700);
+  font-size: var(--fs-600);
   font-weight: bold;
   margin-right: 2rem;
 }
@@ -338,7 +326,8 @@ li::marker {
   font-weight: 700;
   content: "\f054";
   font-size: var(--fs-500);
-  transition: all 500ms;
+  transform: scale(1);
+  transition: all 1500ms;
 }
 
 /* navlist dynamic hover styling */
@@ -348,26 +337,8 @@ li {
   cursor: pointer;
 }
 
-li::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  border: solid 1px var(--accent-colour-one);
-  transition: all 400ms ease;
-}
-
-li:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
 li:hover::marker {
   color: var(--accent-colour-one);
-  font-size: var(--fs-600);
 }
 
 /*#endregion */
@@ -500,6 +471,8 @@ margin-block: 2rem;
 
 /* #region projects */
 
+/* ? section(s) */
+
 .projects {
   filter: blur(1rem);
   transition: all 500ms;
@@ -518,6 +491,14 @@ margin-block: 2rem;
 
 .projects:hover {
   filter: blur(0);
+}
+
+/* ? projects-image */
+
+.image-projects {
+  margin: auto;
+  aspect-ratio: 1/1;
+ filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 /* ? projects-div's */
@@ -541,26 +522,6 @@ margin-block: 2rem;
   justify-content: center;
 }
 
-.projects a {
-  width: fit-content;
-  align-self: center;
-  font-size: var(--fs-600);
-  font-weight: bold;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-
-}
-
-/* ? projects-content */
-
-.image-projects {
-  margin: auto;
-  aspect-ratio: 1/1;
-
- filter: drop-shadow(0rem -1rem 3rem white);
-}
-
 .projects h3 {
   width: 60%;
   text-align: start;
@@ -570,41 +531,28 @@ margin-block: 2rem;
   padding-left: 3rem;
 }
 
-/* ? projects link general dynamic hover styling */
+/* ? projects links */
 
-.projects a::after {
-content: "";
-position: absolute;
-bottom: 0;
-left: 0;
-border: solid 1px var(--link-hover-color);
-width: 100%;
-transform: scaleX(0);
-transform-origin: left;
-transition: all 500ms;
+.projects a {
+  align-self: center;
+  font-size: var(--fs-600);
+  font-weight: bold;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.projects a:hover::after{
-transform: scaleX(1);
-transform-origin: left;
+.project-one a,
+.project-three a {
+  color: var(--main-red);
 }
 
-/* differed link hover colour*/
-
-.project-two a:hover {
+.project-two a {
   color: var(--prime-intense-blue);
 }
 
-.project-two a::after {
-  border: solid 1px var(--prime-intense-blue);
-}
-
-.project-four a:hover {
-  color: white;
-}
-
-.project-four a::after {
-  border: solid 1px white;
+.project-four a {
+  color: var(--main-white);
 }
 
 /* #endregion */
@@ -748,14 +696,24 @@ transform-origin: left;
   margin-top: 1rem;
 }
 
-.img_socialmedias {
+.img-socialmedia {
   width: 2rem;
   height: 2rem;
 }
 
 /* ? invert the all black github logo to white*/
+
 .div-socialmedia :nth-child(6) {
   filter: invert(1);
+}
+
+/* ? E-mail me link */
+.myemail {
+  color: var(--accent-colour-one);
+}
+
+.myemail:hover {
+  color: var(--link-hover-color);
 }
 
 /* #endregion */
@@ -858,6 +816,8 @@ transform-origin: left;
 
 /* #region section projects */
 
+/* ? section: introduction */
+
 .div-headline-section-projects::before {
   position: absolute;
   content: "";
@@ -887,7 +847,7 @@ transform-origin: left;
  width: 50%;
  transition: all 2s ease;
 }
-
+    
 /* #endregion */ 
 
 /* #endregion */
@@ -1101,6 +1061,8 @@ header:hover .navlist::after{
 
 /* #region projects */
 
+/* ? design strokes */
+
 .section-projects:hover .div-headline-section-projects:before {
   border-color: var(--design-strokes-accent-colour);
   top: 0;
@@ -1118,6 +1080,16 @@ header:hover .navlist::after{
   right: 0;
   width: 25%;
  }
+
+/* ? a links */
+
+.projects a:hover{
+  transition: all 1000ms ease;
+  }
+
+  .projects a:hover{
+  transform: scale(1.2);
+  }
 
 /* #endregion */ 
 
@@ -1182,6 +1154,18 @@ width: 2rem;
 .section-contacts:hover .headline-contact::after {
   border-color: var(--design-strokes-accent-colour);
   height: 3rem;
+}
+
+/* ? social media icons */
+
+.img-socialmedia {
+  transition: all 500ms ease;
+  filter: grayscale(0.8);
+}
+
+.img-socialmedia:hover {
+  transform: scale(2);
+  filter: grayscale(0);
 }
 
 /* #endregion */ 
