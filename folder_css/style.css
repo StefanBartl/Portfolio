@@ -219,6 +219,11 @@ h1, h2 {
   overflow-wrap: break-word;
 }
 
+h1 {
+  padding-right: 1rem;
+  font-size: 4.5vw;
+}
+
 h3 {
   text-transform: uppercase;
 }
@@ -376,6 +381,7 @@ li:hover::marker {
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 3rem;
+  padding-right: 2.5rem;
   min-height: 100vh;
 }
 
@@ -401,10 +407,8 @@ li:hover::marker {
 }
 
 .headline {
-  font-size: 5rem;
   padding-top: 5rem;
   margin-left: auto;
-  padding-right: 2rem;
   margin-bottom: 4rem;
   position: relative;
   background-color: var(--main-colour);
@@ -621,10 +625,8 @@ transform-origin: left;
  }
  
  .about-headline {
-   font-size: 5rem;
    margin-left: auto;
    margin-right: .5rem;
-   padding-right: .5rem;
    background-color: var(--main-colour);
    position: relative;
  }
@@ -657,7 +659,7 @@ transform-origin: left;
   width: 100%;
   padding-bottom: 3rem;
   padding-left:  2rem;
-  padding-right: 3rem;
+  padding-right: 2rem;
   display: flex;
 }
 
@@ -874,7 +876,7 @@ transform-origin: left;
   border: solid 2px var(--design-strokes-colour);
   position: absolute;
   bottom: 0;
-  right: 1rem;
+  right: -.5rem;
   width: 50%;
   transition: all 2s ease;
 }
@@ -884,7 +886,7 @@ transform-origin: left;
   border: solid 2px var(--design-strokes-colour);
   position: absolute;
   bottom: 0;
-  right: 1rem;
+  right: -.5rem;
   height: 100%;
   transition: all 2s ease;
 }
