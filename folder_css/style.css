@@ -20,14 +20,9 @@
 /* #region jobs to-do */
 /*
 !                           to-do 
-todo    Signatur richtig machen
-todo    Porjekte Headline with small display - decision
-todo    Bei der Navbar muss irgendeine coole Grafik, Animation oder ähnliches passieren, damit das nicht so fad ist.
-todo    Header navbar overflow at small screens
-todo    Animation header and hedlines
-todo    Media queries für h1!
-todo    Teste den  media querie in der :root ob die eine Auswirkung hat.
-todo    Bei den Projekten: Das die Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
+todo    handle navbar overflow on small screens!
+todo    project-headline sticky position doesnt work so good on small display.
+todo    Bei den Projekten: Das Position der Beschreibung von der Länge des Links bhängt ist alles andere als optimal! 
 todo    about page: Mach eine Fotoserie daraus mit hovers, damit sich da was tut. 
 todo    about page Map muss gemacht werden (Farbanpaasung + Marker in Wien [vielleicht mit hover ])
 todo    Bei translate ändert sich die Textlänge stark, dass bitte beim Landkarten re-design berücksichtigen (Größe)!
@@ -40,7 +35,6 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
 /*#region CSS-Setup */
 
 /*? ===  font(s) === */
-
 /* futura */
 @import url("https://use.typekit.net/izw3hmc.css");
 
@@ -71,66 +65,58 @@ todo    Finish Table of content. All commented out? Summed all possible rules?
   /* ==================  
 ?    ===  Colour-Palette  ===
 .     ================== */
-
-  --main-black: hsl(0, 0%, 0%);
-  --main-white: hsl(0, 0%, 100%);
-  --main-red: hsl(0, 100%, 50%);
-  --main-yellow: hsl(60, 100%, 50%);
-
-  --prime-blueviolett: hsl(238, 56%, 19%);
-  --prime-darkgrey: hsl(330, 2%, 17%);
-  --prime-green: hsl(95, 63%, 36%);
-  --prime-yellow-dark: hsl(43, 100%, 50%);
-  --prime-orange: hsl(24, 100%, 50%);
-  --prime-grapefruit: hsl(3, 83%, 64%);
-  --prime-manner: hsl(10, 60%, 80%);
-  --prime-lightgrey: rgb(178, 182, 160);
-  --prime-pink: hsl(330, 100%, 50%);
-  --prime-pinkviolett: hsl(300, 100%, 50%);
-  --prime-intense-blue: hsl(240, 100%, 49%);
-  --prime-pastell-blue: hsl(201, 79%, 46%);
-  --prime-torquise: rgb(8, 253, 216);
-
-  --wkd-grey: rgb(107, 106, 106);
-  --wkd-midgrey: rgb(38, 38, 38);
+  --wkd-black: rgb(0, 0, 0);
   --wkd-darkgrey: rgb(29, 29, 29);
+  --wkd-midgrey: rgb(61, 61, 61);
+  --wkd-grey: rgb(107, 106, 106);
+  --wkd-lightgrey: rgb(178, 182, 160);
+  --wkd-white: rgb(255, 255, 255);
+  --wkd-red: rgb(255, 0, 0);
+  --wkd-green: rgb(82, 150, 34);
+  --wkd-intense-blue: rgb(0, 0, 250);
+  --wkd-pastell-blue: rgb(25, 145, 210);
+  --wkd-torquise: rgb(8, 253, 216);
+  --wkd-blueviolett: rgb(21, 23, 76);
+  --wkd-yellow: rgb(255, 255, 0);
+  --wkd-yellow-dark: rgb(255, 183, 0);
+  --wkd-orange: rgb(255, 102, 0); /* filter: brightness(0) saturate(100%) invert(44%) sepia(24%) saturate(4068%) hue-rotate(1deg) brightness(98%) contrast(106%); */
+  --wkd-grapefruit: rgb(239, 95, 87);
+  --wkd-pink: rgb(255, 0, 128);
+  --wkd-pinkviolett: rgb(255, 0, 255);  /* filter: brightness(0) saturate(100%) invert(19%) sepia(63%) saturate(4179%) hue-rotate(293deg) brightness(123%) contrast(136%); */
+  --wkd-manner: rgb(235, 184, 173);
 }
 
 :root.theme_dark{
 
 /*? === design === */
-
 --main-colour: var(--wkd-darkgrey);
 --main-headlines: var(--wkd-grey);
---counter-colour: var(--main-black);
---accent-colour-one: var(--prime-orange);
+--counter-colour: var(--wkd-black);
+--accent-colour-one: var(--wkd-orange);
 --design-strokes-colour: var(--main-headlines);
---design-strokes-accent-colour: var(--prime-pinkviolett);
---shadows: var(--main-white);
+--design-strokes-accent-colour: var(--wkd-pinkviolett);
+--shadows: var(--wkd-white);
 
 /*? === text === */
---text-main-colour: var(--main-white);
+--text-main-colour: var(--wkd-white);
 --text-optimal-width: clamp(45ch, 50%, 75ch);
---link-hover-color: var(--main-red);
+--link-hover-color: var(--wkd-red);
 
 }
 
 :root.theme_orange{
 
 /*? === design === */
-  
-  --main-colour: var(--prime-orange);
-  --counter-colour: var(--main-black);
-  --accent-colour-one: var(--prime-pink);
+  --main-colour: var(--wkd-orange);
+  --counter-colour: var(--wkd-black);
+  --accent-colour-one: var(--wkd-pink);
   --design-strokes-colour: var(--main-headlines);
-  --shadows: var(--main-white);
+  --shadows: var(--wkd-white);
   
 /*? === text === */
-
---text-main-colour: var(--main-white);
+--text-main-colour: var(--wkd-white);
   --text-optimal-width: clamp(45ch, 50%, 75ch);
-  --link-hover-color: var(--main-red);
-
+  --link-hover-color: var(--wkd-red);
 }
 
 /* #endregion */
@@ -230,7 +216,7 @@ h3 {
 }
 
 .introduction-headline-outro {
-  color: var(--prime-lightgrey);
+  color: var(--wkd-lightgrey);
 }
 
 /* links */
@@ -242,8 +228,7 @@ a {
 header,
 nav,
 ul,
-.div-socialmedia,
-.projects {
+.div-socialmedia {
   display: flex;
 }
 
@@ -474,12 +459,11 @@ margin-block: 2rem;
 /* ? section(s) */
 
 .projects {
-  filter: blur(1rem);
-  transition: all 500ms;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 6rem;
+  gap: 5rem;
+  filter: blur(1rem);
+  transition: all 500ms;
 }
 
 .project-one,
@@ -496,35 +480,26 @@ margin-block: 2rem;
 /* ? projects-image */
 
 .image-projects {
-  margin: auto;
-  aspect-ratio: 1/1;
  filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 /* ? projects-div's */
 
 .div-projects-image {
-  display: flex;
-  width: max(200px, 20%);
+  width: 20vw;
   margin-left: auto;
   margin-right: auto;
 }
 
 .div-projects-description {
-  display: flex;
-  width: clamp(35ch, 30%, 75ch);
-  flex-direction: column;
   font-size: var(--fs-600);
-  padding-left: 1rem;
-  padding-right: 1rem;
+  width: var(--text-optimal-width);
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
 }
 
 .projects h3 {
-  width: 60%;
-  text-align: start;
+  width: fit-content;
 }
 
 .projects p {
@@ -534,25 +509,27 @@ margin-block: 2rem;
 /* ? projects links */
 
 .projects a {
-  align-self: center;
+  width: 20vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
   font-size: var(--fs-600);
   font-weight: bold;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .project-one a,
 .project-three a {
-  color: var(--main-red);
+  color: var(--wkd-red);
 }
 
 .project-two a {
-  color: var(--prime-intense-blue);
+  color: var(--wkd-intense-blue);
 }
 
 .project-four a {
-  color: var(--main-white);
+  color: var(--wkd-white);
 }
 
 /* #endregion */
@@ -640,6 +617,7 @@ margin-block: 2rem;
   margin-top: 4rem;
   margin-left: auto;
   margin-right: auto;
+  filter: ;
 }
 
 /* #endregion */
@@ -1132,17 +1110,12 @@ border-color: var(--design-strokes-accent-colour);
 width: 2rem;
 }
 
-/* ? map  */
-.div-map:hover {
-  border: solid 2px var(--design-strokes-accent-colour);
-  z-index: 3;
-}
-
 /* ? map circles */
 .div-map:hover::after {
-  border-color: var(--prime-pinkviolett);
+  border-color: var(--wkd-pinkviolett);
   transform: scale(2);
 }
+
 
 /* ? contact headline */
 
