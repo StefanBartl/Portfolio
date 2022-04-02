@@ -1,21 +1,19 @@
-/*  ========================
-?   === dom elements shortcuts ===
-     ========================*/
-// ! all pages
+/* =================
+?   === dom elements ===
+     ================= */
+     
 //#region navbar
      const navlist_start = document.querySelector(".navlist-start");
      const navlist_projects = document.querySelector(".navlist-projects");
      const navlist_contact = document.querySelector(".navlist-contact");
      const navlist_about = document.querySelector(".navlist-about");
      const navlist_language = document.querySelector(".navlist-language");
-     // get dom-elements
      const audio_div = document.querySelector(".div-audio");
      const musicnote = document.querySelector(".musicnote");
      const audio_text  = document.querySelector(".p-audio");
 //#endregion
 
-// ! home page       
-//#region section introduction
+//#region index.html: section introduction
 if(document.querySelector(".section-introduction")){
      introduction_mylogo = document.querySelector(".introduction-mylogo");
      introduction_pageHeadline = document.querySelector(".headline");
@@ -29,7 +27,7 @@ if(document.querySelector(".section-introduction")){
 };
 //#endregion
 
-//#region section projects
+//#region index.html: section projects
 if(document.querySelector(".section-projects")){
      projects_section_headline = document.querySelector(".headline-section-projects");
      project_one_image = document.querySelector(".image-project-one");
@@ -51,10 +49,8 @@ if(document.querySelector(".section-projects")){
 };
 //#endregion
 
-// ! about page
-//#region section about
+//#region about.html: section about
 if(document.querySelector(".section-about")){
-     about_mylogo = document.querySelector(".about-mylogo");
      about_headline = document.querySelector(".about-headline");
      about_headline_one = document.querySelector(".about-headline-one");
      about_headline_two = document.querySelector(".about-headline-two");
@@ -65,15 +61,17 @@ if(document.querySelector(".section-about")){
      about_paragraph_four = document.querySelector(".about_paragraph_four");
      about_image_map= document.querySelector(".about-image-map");
      about_image_donaumarina = document.querySelector(".about-image-donaumarina");
+     about_mylogo = document.querySelector(".about-mylogo");
 };
 //#endregion
 
-//#region section-contacts
+//#region about.html: section-contacts
 if(document.querySelector(".section-contacts")){
      contact_headline = document.querySelector(".headline-contact");
      contact_socialmedia_headline = document.querySelector(".headline-socialmedia");
      contact_myblog_headline = document.querySelector(".headline-myblog");
-     contact_myblog_image = document.querySelector(".section-contacts-myblog-image");
+     contact_myblog_image = document.querySelector(".myblog-image");
      contact_myemail = document.querySelector(".myemail");
+     contact_credits = document.querySelector(".credits");
 };
 //#endregion

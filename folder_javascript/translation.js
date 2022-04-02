@@ -80,7 +80,7 @@ function home_translation(language) {
         introduction_headlineTwo.innerText = "Enthusiasmus pur";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "Mit Liebe zur Wissenschaft, der Technik und dem Frieden !";
-        introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Als Autodidakt bin ich stets auf der Suche nach neuen Herausforderungen: Web-Development kam da wie gerufen...";
+        introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Stets auf der Suche nach neuen Herausforderungen und deren Lösung ist Web-Development für mich durch Ehrgeiz & Leidenschaft ausgedrückte Technikbegeisterung.";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
         //? section projects deutsch
         projects_section_headline.innerText = "projekte.";
@@ -117,7 +117,7 @@ function home_translation(language) {
         introduction_headlineTwo.innerText = "Pure enthusiasm";
         introduction_headlineThree.innerText = "HTML, CSS & Javascript";
         introduction_headlineOutro.innerText = "With love for science, technology and peace!";
-        introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. As an autodidact, I am always on the lookout for new challenges: web development came at just the right time...";
+        introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. Always looking for new challenges and their solution, web development for me is enthusiasm for technology supported of ambition and passion.";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
         //? section projects english
         projects_section_headline.innerText = "projects.";
@@ -173,7 +173,10 @@ function about_translation(language) {
       contact_myblog_headline.innerText = "...schau auf meinen Blog vorbei...";
       contact_myblog_image.title = "Hier gehts zu meinen deutschsprachigen Blog über die Gesellschaft, Politik und Wissenschaft!";
       contact_myblog_image.alt = "Eine rote Faust in einem grünen Kreis und zwei Sterne mit der Aufschrift: protestblog.eu - Be Heard!";
-      contact_myemail.innerText = "...oder via E-Mail";       
+      contact_myemail.innerText = "...oder via E-Mail";
+      contact_myemail.title = "Klicken um mir eine E-Mail zu senden!";       
+      contact_credits.title = "Annerkennung ist wichtig. Hier bedanke ich mich bei Personen und Organisationen ohne die diese Seite nicht möglich wäre. Schaue nach um wen es geht!";
+
       //console.log(`About translated to Deutsch`);
     };
     if (language !== "de") {
@@ -199,6 +202,8 @@ function about_translation(language) {
       contact_myblog_image.title = "Click here for my german speaking blog about society, politics and science!";
       contact_myblog_image.alt = "Red fist with green circle, two stars and the text 'protestblog.eu - be heard!' around it.";
       contact_myemail.innerText = "...or via e-mail"; 
+      contact_myemail.title = "Click to send me a E-Mail!";      
+      contact_credits.title = "Recognition is important. I would like to thank the people and organizations without whom this page would not be possible. Check out who it is!"; 
       //console.log(`About translated to english`);
     };
 };
