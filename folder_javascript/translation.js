@@ -36,6 +36,8 @@ function general_translation(language) {
           navlist_language.innerText = "english";
           navlist_language.title = "Switch to English!";
           navlist_language.alt = "Switch to English.";
+          musicnote.title = "Schalte die Musik auf/ab!";
+          musicnote.alt="Stilisierte Musiknote tanzt mit Sternen. Orange Farbe wenn die Musik an ist, Grau wenn abgeschaltet.";
           //console.log(`Navbar translated to Deutsch`);
         };
         //? navbar english
@@ -55,6 +57,8 @@ function general_translation(language) {
           navlist_language.innerText = "deutsch";
           navlist_language.title = "Zu Deutsch wechseln!";
           navlist_language.alt = "Zu Deutsch wechseln.";
+          musicnote.title = "Switch Sound on/off!";
+          musicnote.alt="Styled music note dancing with stars. Is orange coloured if music is on, grey if off.";
           //console.log(`Navbar translated to English`);
         };
   };

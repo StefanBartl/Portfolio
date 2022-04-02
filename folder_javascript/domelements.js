@@ -3,11 +3,15 @@
      ========================*/
 // ! all pages
 //#region navbar
-     navlist_start = document.querySelector(".navlist-start");
-     navlist_projects = document.querySelector(".navlist-projects");
-     navlist_contact = document.querySelector(".navlist-contact");
-     navlist_about = document.querySelector(".navlist-about");
-     navlist_language = document.querySelector(".navlist-language");
+     const navlist_start = document.querySelector(".navlist-start");
+     const navlist_projects = document.querySelector(".navlist-projects");
+     const navlist_contact = document.querySelector(".navlist-contact");
+     const navlist_about = document.querySelector(".navlist-about");
+     const navlist_language = document.querySelector(".navlist-language");
+     // get dom-elements
+     const audio_div = document.querySelector(".div-audio");
+     const musicnote = document.querySelector(".musicnote");
+     const audio_text  = document.querySelector(".p-audio");
 //#endregion
 
 // ! home page       
