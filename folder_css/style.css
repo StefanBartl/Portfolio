@@ -1186,6 +1186,163 @@ width: 2rem;
     font-size: var(--fs-700);
   }
 
+  /* #region header / navlist */
+
+  header {
+    padding: 0%;
+  }
+
+  .navlist {
+    margin-right: 0%;
+    margin-left: -1rem;
+  }
+  
+  .navlist::after {
+    left: 0;
+    bottom: 0;
+    width: 110vw;
+  }
+  
+  ul {
+    gap: 10%;
+    width: 100%;
+    font-size: var(--fs-400);
+    font-weight: normal;
+  }
+
+  ul :nth-child(5) {
+    /* last navbar item */
+    margin-left:0%;
+  }
+  
+  ul :nth-child(5):hover::marker {
+      /* last navbar item arrow */
+    font-size: var(--fs-400);
+  }
+  
+  li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  li a {
+    color: var(--text-main-colour);
+  }
+  
+  li::marker {
+    font-weight: 600;
+    font-size: var(--fs-400);
+  }
+  
+  ul > li {
+      padding-left: 0.2em;
+    }
+    
+    .musicnote {
+      width: 2rem;
+      height: 2rem;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .p-audio {
+      width: 3ch;
+    }
+
+  /* #endregion */
+
+
+  /* #region index.html */
+
+  /* ? Section: Projects*/ 
+
+  .div-headline-section-projects  {
+     position: initial;
+     margin-bottom: 10rem;
+  }
+
+  .headline-section-projects::before {
+    height: 5rem;
+   }
+
+   .section-projects:hover .headline-section-projects::before {
+    height: 3rem;
+   }
+
+  .projects {
+    filter: blur(0);
+  }
+
+  .projects h3 {
+    padding-left: 1rem;
+  }
+
+  .projects p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .projects a {
+    width: fit-content;
+    margin-top: -4rem;
+  }
+
+  .projects a:hover {
+    transform: none;
+  }
+
+  /* #endregion */
+
+
+  /* #region about.html */
+
+  .div-about-headline {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30%;
+    margin-right: 0%;
+  }
+
+   .about-mylogo {
+     width: 20%;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 0%;
+     margin-bottom: 2rem;
+     padding-top: 0%;
+     padding-left: 0%;
+     padding-right: 0%;
+     background-color: none;
+   }
+
+   .about-mylogo::before,
+   .about-mylogo::after,
+   .about-headline::before,
+   .about-headline::after {
+    display: none;
+  }
+
+  .about-headline {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: none;
+    font-size: 3rem;
+    text-align: center;
+    background: none;
+  }
+  
+  .section-about {
+    flex-direction: column;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .about-div-description:hover .about-headline-two::before { 
+    border-color: var(--design-strokes-accent-colour);
+  }
+  
+
+  /* #endregion */
+
 }
 
 /* #endregion */

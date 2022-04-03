@@ -104,6 +104,10 @@ function home_translation(language) {
         project_two_link.innerText = "Eine Runde 4 - Gewinnt ?";
         project_three_link.innerText = "Drei gewinnt geht immer !";
         project_four_link.innerText = "Schnick, Schnack, Schnuck !";
+        project_one_link.title = "Klicke um zu malen !";
+        project_two_link.title = "Klicke um zu spielen !";
+        project_three_link.title = "Klicke um zu spielen !";
+        project_four_link.title = "Klicke um zu spielen !";
         //console.log(`Home translated to Deutsch`);
       };
       if (language !== "de") {
@@ -141,6 +145,10 @@ function home_translation(language) {
         project_two_link.innerText = "Wanna play a round 4-in-a-row ?";
         project_three_link.innerText = "3-in-a-row is always possible!";
         project_four_link.innerText = "Rock Paper Scissors !";
+        project_one_link.title = "Click to draw !";
+        project_two_link.title = "Click to play !";
+        project_three_link.title = "Click to play !";
+        project_four_link.title = "Click to play !";
         //console.log(`Home translated to english`);
       };
   };
