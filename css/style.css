@@ -219,6 +219,7 @@ ul,
 .section-introduction,  /* index.html */
 .introduction-headline,
 .div-headline-section-projects,
+.div-headline-section-react,
 .projects,
 .div-about-headline,  /* about.html */
 .section-about,
@@ -447,7 +448,7 @@ margin-block: 2rem;
 
 /* #region projects-headline */
 
-.div-headline-section-projects {
+.div-headline-section-projects{
   width: 100%;
   margin-top: 5vh;
   margin-bottom: 10vh;
@@ -456,7 +457,22 @@ margin-block: 2rem;
   z-index: 2;
 }
 
-.headline-section-projects {
+.div-headline-section-reacts{
+  display: flex;
+  width: 100%;
+  margin-top: 5vh;
+  position: sticky;
+  top: 5.6rem;
+  z-index: 2;
+}
+
+.headline-section-react{
+  justify-self: end;
+ margin-bottom: 3rem;
+}
+
+.headline-section-projects,
+.headline-section-react {
   font-size: 4rem;
   margin-left: auto;
   margin-right: 1rem;
@@ -475,10 +491,8 @@ margin-block: 2rem;
   transition: all 500ms;
 }
 
-.project-one,
-.project-two,
-.project-three,
-.project-four {
+.project-one, .project-two, .project-three, .project-four,
+.react-one {
   margin-bottom: 10rem;
 }
 
@@ -488,19 +502,22 @@ margin-block: 2rem;
 
 /* ? projects-image */
 
-.image-projects {
+.image-projects,
+.image-react  {
  filter: drop-shadow(0rem -1rem 3rem white);
 }
 
 /* ? projects-div's */
 
-.div-projects-image {
+.div-projects-image,
+.div-react-image  {
   width: 15vw;
   margin-left: auto;
   margin-right: auto;
 }
 
-.div-projects-description {
+.div-projects-description,
+.div-react-description  {
   font-size: var(--fs-600);
   width: var(--text-optimal-width);
   margin-left: auto;
@@ -529,7 +546,8 @@ margin-block: 2rem;
 }
 
 .project-one a,
-.project-three a {
+.project-three a,
+.react-one a {
   color: var(--wkd-red);
 }
 
@@ -719,6 +737,8 @@ margin-block: 2rem;
 .div-headline-section-projects::before,
 .headline-section-projects::before,
 .headline-section-projects::after,
+.div-headline-section-react::before,
+.headline-section-react::before,
 .about-mylogo::before,  /* about.html */
 .about-mylogo::after,
 .about-headline::before,
@@ -806,19 +826,22 @@ margin-block: 2rem;
 
 /* ? section: introduction */
 
-.div-headline-section-projects::before {
+.div-headline-section-projects::before,
+.div-headline-section-react::before {
   top: 0;
   right: 1rem;
   width: 20%;
  }
 
-.headline-section-projects::before {
+.headline-section-projects::before,
+.headline-section-react::before  {
   bottom: 0;
   right: 0;
   height: 150vh;
  }
  
-.headline-section-projects::after {
+.headline-section-projects::after,
+.headline-section-react::after {
  bottom: 0;
  right: 0;
  width: 50%;
@@ -1026,18 +1049,21 @@ li:hover {
 
 /* ? design strokes */
 
-.section-projects:hover .div-headline-section-projects:before {
+.section-projects:hover .div-headline-section-projects:before,
+.section-react:hover .div-headline-section-react:before  {
   border-color: var(--design-strokes-accent-colour);
   top: 0;
   right: 1rem;
   width: 3rem;
  }
 
- .section-projects:hover .headline-section-projects::before {
+ .section-projects:hover .headline-section-projects::before,
+ .section-react:hover .headline-section-react::before {
   border-color: var(--design-strokes-accent-colour);
  }
 
- .section-projects:hover .headline-section-projects::after {
+ .section-projects:hover .headline-section-projects::after,
+ .section-react:hover .headline-section-react::after {
    border-color: var(--design-strokes-accent-colour);
   bottom: 0;
   right: 0;

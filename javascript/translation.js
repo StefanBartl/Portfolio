@@ -82,8 +82,18 @@ function home_translation(language) {
         introduction_headlineOutro.innerText = "Mit Liebe zur Wissenschaft, der Technik und dem Frieden !";
         introduction_paragraphOne.innerText = "Auf dieser Portfolio-Webppage gebe ich einen Einblick auf abgeschlossene & solide Webentwicklungs-Projekte. Als ich 2020 mit dem programmieren begann konnte ich noch nicht ahnen wie viel Spaß und Leidenschaft dieses breite Feld in mir entfesseln würde. Stets auf der Suche nach neuen Herausforderungen und deren Lösung ist Web-Development für mich durch Ehrgeiz & Leidenschaft ausgedrückte Technikbegeisterung.";
         introduction_paragraphTwo.innerText = "Derzeit beschäftige ich mich stark konzentriert auf die 3 Bereiche HTM, CSS und Javascript, spezialisiert auf Front-End Web-Development. Daher findest du hier auch ausschließlich Projekte die sich mit diesen drei 'Tools' beschäftigen - teils spielerisch, teils mit praktischen Nutzen.";
-        //? section projects deutsch
-        projects_section_headline.innerText = "projekte.";
+       
+       //? section react deutsch
+       react_section_headline.innerText = "react projekte.";
+       react_one_image.title = "Lust auf ein 'Brain-Game?'";
+       react_one_image.alt = "Eine Memory-Card";
+       react_one_headline.innerText = "Memory-Card Merkspiel"; 
+       react_one_description.innerText = "Merke dir so schnell es geht 10 Karten! Klicke sie so schnell es geht nacheinander an, aber keines zweimal - dann beginnst du von vorne! Mein erstes richtigses React-Projekt!";
+       react_one_link.innerText = "3, 2, 1,... Merken & Klicken!";
+       react_one_link.title = "Klicke um zum Merkspiel zu gelangen !";
+
+        //? section vanilla javascript projects deutsch
+        projects_section_headline.innerText = "js projekte.";
         project_one_image.title = "Weckt es Erinnerungen an dein Kinderzimmer?";
         project_one_image.alt = "Ein Etch-a-Sketch Spielapparat in rot mit weißen Knöpfen.";
         project_two_image.title = "4-Gewinnt: Die erweiterte Version des 'Doddel-Schach' !";
@@ -123,8 +133,18 @@ function home_translation(language) {
         introduction_headlineOutro.innerText = "With love for science, technology and peace!";
         introduction_paragraphOne.innerText = "On this portfolio webpage I give an insight into completed & solid web development projects. When I started programming in 2020, I could not have imagined how much fun and passion this broad field would unleash in me. Always looking for new challenges and their solution, web development for me is enthusiasm for technology supported of ambition and passion.";
         introduction_paragraphTwo.innerText = "Currently i have a strong focus on the 3 areas HTML, CSS & Javascript, specializing in front-end web-development. Therefore you will only find projects that deal with these three 'tools' - partly playful, partly with practical use.";
-        //? section projects english
-        projects_section_headline.innerText = "projects.";
+       
+        //? section react english
+        react_section_headline.innerText = "react projects.";
+        react_one_image.title = "Fancy a 'Brain Game?'";
+        react_one_image.alt = "A Memory-Card";
+        react_one_headline.innerText = "Memory Card Memo Game"; 
+        react_one_description.innerText = "Memorize 10 cards as quickly as possible! Click on them one after the other as quickly as possible, but not twice - then you start over! My first real React project!";
+        react_one_link.innerText = "3, 2, 1,... Remember & Click!";
+        react_one_link.title = "Click to get to the memory game!";
+       
+        //? section vanilla javascript projects english
+        projects_section_headline.innerText = "js projects.";
         project_one_image.title = "Does it bring back memories of your childhood room?";
         project_one_image.alt = "An Etch-a-Sketch game machine in red with white buttons.";
         project_two_image.title = "4-in-a-row: The extended version of 'Noob Chess'!";

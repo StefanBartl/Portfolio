@@ -29,6 +29,15 @@ if(document.querySelector(".section-introduction")){
 
 //#region index.html: section projects
 if(document.querySelector(".section-projects")){
+
+     // React projects
+     react_section_headline = document.querySelector(".headline-section-react");
+     react_one_image = document.querySelector(".image-react-one");
+     react_one_headline = document.querySelector(".h3-react-one");
+     react_one_description = document.querySelector(".p-react-one");
+     react_one_link = document.querySelector(".link-react-one");
+
+     // Vanilla Javascript projects
      projects_section_headline = document.querySelector(".headline-section-projects");
      project_one_image = document.querySelector(".image-project-one");
      project_two_image = document.querySelector(".image-project-two");
